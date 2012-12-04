@@ -54,7 +54,7 @@ h1,h3,h5
 .masthead
   background: $lt_green
   border-bottom: 10px solid $md_green
-  nav
+  .menu
     ul
       text-align: right
       li
@@ -93,19 +93,21 @@ h1,h3,h5
         left: 0
     .caption
       position: absolute
-      top: 50%
+      top: 45%
       width: $cols6
       left: $cols2
       color: $drk_green
-      font-size: 24px
       h3
         font-size: 62px
         text-shadow: 2px 2px 0 $white
         white-space: nowrap
+      p
+        font-size: 24px
       .big-button
         text-align: right
         position: relative
         width: $cols3 - 3em
+        font-size: 24px
         &:after
           content: ""
           border-color: transparent transparent transparent $md_green
