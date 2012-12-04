@@ -10,6 +10,7 @@ $yellow: #E1E6B9
 $lt_green: #A9CF54
 $md_green: #588F27
 $drk_green: #003300
+$blktnt: rgba(0,0,0,.5)
 
 //General
 
@@ -22,6 +23,14 @@ body
   width: $cols16
   margin: 0 auto
   position: relative
+
+//UI Elements
+
+.button
+  background: $lt_green
+  color: $white
+  padding: 10px $gutter
+  border: 2px solid $md_green
 
 //Header
 
@@ -37,10 +46,10 @@ body
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom  repeat-x $lt_green
   color: $white
   .wrapper
-    padding: $gutter*3 0
-    h3,.flexslider, .social
+    padding: $gutter*2 0 
+    h3,.flexslider, .social, .footer-nav-container
       display: inline-block
-      vertical-align: top
+      vertical-align: middle
   .flexslider
     width: $cols7
     background: none
@@ -48,38 +57,62 @@ body
     border: none
     margin: 0
     position: relative
+    overflow-y: hidden
+    border-radius: 0
     .frame
-      background: url(images/flex_overlap.png) left top repeat-y, url(images/flex_overlap_right.png) right top repeat-y
       position: absolute
       z-index: 3
-      padding: 10px 20px
+      padding: 20px 0
       width: 100%
-      height: 70%
-      top: 0
-    li
-      background: $yellow
-      color: $drk_green
+      height: 100%
+      top: -10px
+      box-shadow: inset 0 0 10px rgba(0,0,0,.75)
+    .flex-viewport
+      overflow-y: visible
+      padding: 10px 0
+    .slides
+      li
+        background: $yellow
+        box-shadow: 1px 1px 3px $blktnt
+        color: $drk_green
+        position: relative
+        z-index: 0
+        padding: 10px 0
+        border:
+          top: 1px solid $white
+          bottom: 1px solid $white
+        &>
+          margin: 0 10px
+        h4
+          margin: 0 10px
+          text-shadow: 0 -1px 3px $white
+        .button
+          padding: 5px 20px
+        span
+          position: absolute
+          right: 10px
+          top: 7%
+  .footer-nav-container
+    position: relative
+    width: $cols2
+    padding: 0 $gutter
+    .flex-direction-nav
       position: relative
-      z-index: 0
-      padding: 10px
-      border:
-        top: 1px solid $white
-        bottom: 1px solid $white
-      h4,span
-        display: inline-block
-        vertical-align: middle
-      span
-        text-align: right
-  .flex-direction-nav
-    display: none
+      .flex-next
+        right: 0
+      .flex-prev
+        left: 0
 .social
   display: inline-block
   li
     display: inline-block
     vertical-align: top
-    width: $cols1/2
+    width: $cols1/1.5
     img
       width: 100%
       height: auto
+.credits
+  text-align: right
+  margin: $gutter*3 0 -20px
 
 //Break Points
