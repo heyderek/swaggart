@@ -1,5 +1,9 @@
 $(document).ready(function(){
-  $('.flexslider').flexslider({
+  $('.featured-content .flexslider').flexslider({
+    animation: "slide",
+    controlNav: false
+  });
+  $('footer .flexslider').flexslider({
     animation: "slide",
     animationLoop: false,
     controlNav: false

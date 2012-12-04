@@ -63,6 +63,12 @@ h1,h2,h3,h4,h5,h6
 
 //Front Page
 
+.featured-content
+  .flexslider
+    background: none
+    box-shadow: none
+    border: none
+
 //Content
 
 //Sidebar
@@ -154,15 +160,15 @@ h1,h2,h3,h4,h5,h6
         vertical-align: middle
         white-space: nowrap
         font-size: 0
-      .flex-disabled
-        opacity: .45 !important
       a
         width: 50px
         position: relative
         margin: 0
-        opacity: 1
+        opacity: .65
         height: 65px
         background: url(images/arrows.png)
+        &:hover
+          opacity: 1
       .flex-next
         right: 0
         background-position: 50px top

@@ -436,6 +436,11 @@ h1, h2, h3, h4, h5, h6 {
           background: #8bb745;
           color: #e1e6b9; }
 
+.featured-content .flexslider {
+  background: none;
+  box-shadow: none;
+  border: none; }
+
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
   color: white; }
@@ -519,15 +524,15 @@ h1, h2, h3, h4, h5, h6 {
         vertical-align: middle;
         white-space: nowrap;
         font-size: 0; }
-      .colophon .footer-nav-container .flex-direction-nav .flex-disabled {
-        opacity: 0.45 !important; }
       .colophon .footer-nav-container .flex-direction-nav a {
         width: 50px;
         position: relative;
         margin: 0;
-        opacity: 1;
+        opacity: 0.65;
         height: 65px;
         background: url(images/arrows.png); }
+        .colophon .footer-nav-container .flex-direction-nav a:hover {
+          opacity: 1; }
       .colophon .footer-nav-container .flex-direction-nav .flex-next {
         right: 0;
         background-position: 50px top; }
