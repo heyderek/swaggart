@@ -8,7 +8,7 @@ $(document).ready(function(){
     animationLoop: false,
     controlNav: false
   });
-  $('.flex-direction-nav').html(function(){
+  $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
 });

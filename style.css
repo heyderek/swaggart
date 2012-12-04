@@ -440,6 +440,15 @@ h1, h2, h3, h4, h5, h6 {
   background: none;
   box-shadow: none;
   border: none; }
+  .featured-content .flexslider .flex-direction-nav a {
+    width: 100px;
+    height: 100px; }
+  .featured-content .flexslider .flex-direction-nav .flex-next {
+    background: url(images/arrow_right.png) center center;
+    right: 0; }
+  .featured-content .flexslider .flex-direction-nav .flex-prev {
+    background: url(images/arrow_left.png) center center;
+    left: 0; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
