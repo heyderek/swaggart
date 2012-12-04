@@ -18,7 +18,8 @@ html
   overflow-x: hidden
 body
   background: $md_green
-
+a
+  text-decoration: none
 .wrapper
   width: $cols16
   margin: 0 auto
@@ -31,6 +32,7 @@ body
   color: $white
   padding: 10px $gutter
   border: 2px solid $md_green
+  color: $white
 
 //Header
 
@@ -70,6 +72,25 @@ body
     .flex-viewport
       overflow-y: visible
       padding: 10px 0
+      &:before
+        background: radial-gradient(ellipse at left center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 80%)
+        width: 25px
+        content: ""
+        position: absolute
+        left: -15px
+        top: 0
+        padding: 2px
+        height: 100%
+        z-index: 3
+      &:after
+        background: radial-gradient(ellipse at right center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 85%)
+        width: 25px
+        content: ""
+        position: absolute
+        right: -15px
+        top: 0
+        padding: 2px
+        height: 100%
     .slides
       li
         background: $yellow
@@ -91,15 +112,32 @@ body
         span
           position: absolute
           right: 10px
-          top: 7%
+          top: 27%
+          z-index: 3
   .footer-nav-container
     position: relative
-    width: $cols2
+    width: $cols2 - 2em
     padding: 0 $gutter
     .flex-direction-nav
       position: relative
+      text-align: center
+      li
+        display: inline-block
+        vertical-align: middle
+        white-space: nowrap
+        font-size: 0
+      .flex-disabled
+        opacity: .45 !important
+      a
+        width: 50px
+        position: relative
+        margin: 0
+        opacity: 1
+        height: 65px
+        background: url(images/arrows.png)
       .flex-next
         right: 0
+        background-position: 50px top
       .flex-prev
         left: 0
 .social

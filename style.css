@@ -369,6 +369,9 @@ html {
 body {
   background: #588f27; }
 
+a {
+  text-decoration: none; }
+
 .wrapper {
   width: 78.75em;
   margin: 0 auto;
@@ -378,7 +381,8 @@ body {
   background: #a9cf54;
   color: white;
   padding: 10px 20px;
-  border: 2px solid #588f27; }
+  border: 2px solid #588f27;
+  color: white; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
@@ -408,6 +412,25 @@ body {
     .colophon .flexslider .flex-viewport {
       overflow-y: visible;
       padding: 10px 0; }
+      .colophon .flexslider .flex-viewport:before {
+        background: radial-gradient(ellipse at left center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+        width: 25px;
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 0;
+        padding: 2px;
+        height: 100%;
+        z-index: 3; }
+      .colophon .flexslider .flex-viewport:after {
+        background: radial-gradient(ellipse at right center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 85%);
+        width: 25px;
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 0;
+        padding: 2px;
+        height: 100%; }
     .colophon .flexslider .slides li {
       background: #e1e6b9;
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -427,15 +450,32 @@ body {
       .colophon .flexslider .slides li span {
         position: absolute;
         right: 10px;
-        top: 7%; }
+        top: 27%;
+        z-index: 3; }
   .colophon .footer-nav-container {
     position: relative;
-    width: 8.75em;
+    width: 6.75em;
     padding: 0 20px; }
     .colophon .footer-nav-container .flex-direction-nav {
-      position: relative; }
+      position: relative;
+      text-align: center; }
+      .colophon .footer-nav-container .flex-direction-nav li {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-size: 0; }
+      .colophon .footer-nav-container .flex-direction-nav .flex-disabled {
+        opacity: 0.45 !important; }
+      .colophon .footer-nav-container .flex-direction-nav a {
+        width: 50px;
+        position: relative;
+        margin: 0;
+        opacity: 1;
+        height: 65px;
+        background: url(images/arrows.png); }
       .colophon .footer-nav-container .flex-direction-nav .flex-next {
-        right: 0; }
+        right: 0;
+        background-position: 50px top; }
       .colophon .footer-nav-container .flex-direction-nav .flex-prev {
         left: 0; }
 
