@@ -439,7 +439,10 @@ h1, h2, h3, h4, h5, h6 {
 .featured-content .flexslider {
   background: #a9cf54;
   box-shadow: none;
-  border: none; }
+  border: none;
+  margin-bottom: 0; }
+  .featured-content .flexslider .slides li {
+    position: relative; }
   .featured-content .flexslider .flex-direction-nav a {
     width: 100px;
     height: 100px; }
@@ -449,6 +452,11 @@ h1, h2, h3, h4, h5, h6 {
   .featured-content .flexslider .flex-direction-nav .flex-prev {
     background: url(images/arrow_left.png) center center;
     left: 0; }
+  .featured-content .flexslider .caption {
+    position: absolute;
+    top: 65%;
+    width: 28.75em;
+    left: 8.75em; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
