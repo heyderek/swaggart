@@ -1,6 +1,7 @@
 @import 'reset.sass'
 @import 'frameless.sass'
 @import 'flexslider.sass'
+@import 'fonts/stylesheet.sass'
 
 
 //Colors
@@ -18,8 +19,11 @@ html
   overflow-x: hidden
 body
   background: $md_green
+  @include open_sansregular
 a
   text-decoration: none
+h1,h2,h3,h4,h5,h6
+  font-weight: normal
 .wrapper
   width: $cols16
   margin: 0 auto
@@ -111,7 +115,7 @@ a
           text-overflow: ellipsis
           width: 65%
         .button
-          padding: 5px 20px
+          padding: 0 20px
         span
           position: absolute
           right: 10px
