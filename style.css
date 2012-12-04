@@ -404,7 +404,11 @@ a {
   transition: all 0.3s linear; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0 0 20px 0; }
+
+h1, h3, h5 {
+  font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .wrapper {
   width: 78.75em;
@@ -416,6 +420,12 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   padding: 10px 20px;
   border: 2px solid #588f27;
+  color: white; }
+
+.big-button {
+  background: #588f27;
+  padding: 20px;
+  display: block;
   color: white; }
 
 .masthead {
@@ -454,9 +464,47 @@ h1, h2, h3, h4, h5, h6 {
     left: 0; }
   .featured-content .flexslider .caption {
     position: absolute;
-    top: 65%;
+    top: 50%;
     width: 28.75em;
-    left: 8.75em; }
+    left: 8.75em;
+    color: #003300;
+    font-size: 24px; }
+    .featured-content .flexslider .caption h3 {
+      font-size: 62px;
+      text-shadow: 2px 2px 0 white;
+      white-space: nowrap; }
+    .featured-content .flexslider .caption .big-button {
+      text-align: right;
+      position: relative;
+      width: 10.75em; }
+      .featured-content .flexslider .caption .big-button:after {
+        content: "";
+        border-color: transparent transparent transparent #588f27;
+        border-style: solid;
+        border-width: 62px;
+        display: block;
+        position: absolute;
+        right: -124px;
+        top: 0; }
+      .featured-content .flexslider .caption .big-button span {
+        text-transform: uppercase;
+        font-size: 38px;
+        display: block;
+        font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.content {
+  line-height: 1.35; }
+  .content h1, .content h3, .content h5 {
+    text-transform: uppercase; }
+  .content p {
+    margin: 0 0 20px 0; }
+  .content ul, .content ol {
+    margin: 0 0 20px 10px;
+    padding: 0 0 0 10px; }
+  .content ul {
+    list-style: disc outside; }
+  .content ol {
+    list-style: decimal outside; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
