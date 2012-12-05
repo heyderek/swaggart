@@ -171,9 +171,15 @@ h1,h3,h5
   color: $white
   .wrapper
     padding: $gutter*2 0 
-    h3,.flexslider, .social, .footer-nav-container
+    h3,.flexslider, .social, .footer-nav-container, img
       display: inline-block
       vertical-align: middle
+    h3
+      margin: 0 10px
+      font-size: 22px
+      img
+        width: $cols1/1.75
+        margin: 0 10px 
   .flexslider
     width: $cols7
     background: none
@@ -195,7 +201,8 @@ h1,h3,h5
       overflow-y: visible
       padding: 10px 0
       &:before
-        background: radial-gradient(ellipse at left center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 80%)
+        background: -webkit-radial-gradient(left, ellipse cover, rgba(0,0,0,.65) 0%,rgba(0,0,0,0) 75%)
+        background: radial-gradient(ellipse at left center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 75%)
         width: 25px
         content: ""
         position: absolute
@@ -205,7 +212,8 @@ h1,h3,h5
         height: 100%
         z-index: 3
       &:after
-        background: radial-gradient(ellipse at right center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 85%)
+        background: -webkit-radial-gradient(right, ellipse cover, rgba(0,0,0,.65) 0%,rgba(0,0,0,0) 75%)
+        background: radial-gradient(ellipse at right center, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 75%)
         width: 25px
         content: ""
         position: absolute
@@ -217,7 +225,7 @@ h1,h3,h5
       li
         background: $yellow
         box-shadow: 1px 2px 4px $blktnt
-        color: $drk_green
+        color: $md_green
         position: relative
         z-index: 0
         padding: 10px 0
@@ -227,15 +235,19 @@ h1,h3,h5
         &>
           margin: 0 10px
         h4
-          margin: 0 10px
+          border:
+            top: 2px dotted $white
+            bottom: 2px dotted $white
+          margin: 0
+          padding: 10px 20px
           text-shadow: 0 -1px 3px $white
           white-space: nowrap
         .button
           padding: 0 20px
         span
           position: absolute
-          right: 10px
-          top: 27%
+          right: 20px
+          top: 37%
           z-index: 3
   .footer-nav-container
     position: relative

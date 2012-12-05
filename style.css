@@ -534,9 +534,15 @@ h1, h3, h5 {
   color: white; }
   .colophon .wrapper {
     padding: 40px 0; }
-    .colophon .wrapper h3, .colophon .wrapper .flexslider, .colophon .wrapper .social, .colophon .wrapper .footer-nav-container {
+    .colophon .wrapper h3, .colophon .wrapper .flexslider, .colophon .wrapper .social, .colophon .wrapper .footer-nav-container, .colophon .wrapper img {
       display: inline-block;
       vertical-align: middle; }
+    .colophon .wrapper h3 {
+      margin: 0 10px;
+      font-size: 22px; }
+      .colophon .wrapper h3 img {
+        width: 2.143em;
+        margin: 0 10px; }
   .colophon .flexslider {
     width: 33.75em;
     background: none;
@@ -558,7 +564,8 @@ h1, h3, h5 {
       overflow-y: visible;
       padding: 10px 0; }
       .colophon .flexslider .flex-viewport:before {
-        background: radial-gradient(ellipse at left center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 80%);
+        background: -webkit-radial-gradient(left, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(ellipse at left center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
         width: 25px;
         content: "";
         position: absolute;
@@ -568,7 +575,8 @@ h1, h3, h5 {
         height: 100%;
         z-index: 3; }
       .colophon .flexslider .flex-viewport:after {
-        background: radial-gradient(ellipse at right center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 85%);
+        background: -webkit-radial-gradient(right, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(ellipse at right center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
         width: 25px;
         content: "";
         position: absolute;
@@ -579,7 +587,7 @@ h1, h3, h5 {
     .colophon .flexslider .slides li {
       background: #e1e6b9;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-      color: #003300;
+      color: #588f27;
       position: relative;
       z-index: 0;
       padding: 10px 0;
@@ -588,15 +596,18 @@ h1, h3, h5 {
       .colophon .flexslider .slides li > {
         margin: 0 10px; }
       .colophon .flexslider .slides li h4 {
-        margin: 0 10px;
+        border-top: 2px dotted white;
+        border-bottom: 2px dotted white;
+        margin: 0;
+        padding: 10px 20px;
         text-shadow: 0 -1px 3px white;
         white-space: nowrap; }
       .colophon .flexslider .slides li .button {
         padding: 0 20px; }
       .colophon .flexslider .slides li span {
         position: absolute;
-        right: 10px;
-        top: 27%;
+        right: 20px;
+        top: 37%;
         z-index: 3; }
   .colophon .footer-nav-container {
     position: relative;
