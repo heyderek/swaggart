@@ -29,6 +29,10 @@ $(document).ready(function(){
   $('.menu ul li a').click(function(){
     $('.featured-content .flexslider').css('opacity', '.5');
     $(this).next().addClass('open');
+    $('.close').click(function(){
+      $('.featured-content .flexslider').css('opacity', '1');
+      $('div.menu-overlay').slideUp();
+    });
     if($(this).next().hasClass('open')){
       $('div.menu-overlay').slideUp().removeClass('open');
       $(this).next().slideDown();
