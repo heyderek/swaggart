@@ -27,7 +27,7 @@ $(document).ready(function(){
   });
   //Navigation
   $('.menu ul li a').click(function(){
-    $('.featured-content .flexslider').css('opacity', '.5');
+    $('.featured-content .flexslider').fadeTo(500, '.5');
     $(this).next().addClass('open');
     $('.close').click(function(){
       $('.featured-content .flexslider').css('opacity', '1');
