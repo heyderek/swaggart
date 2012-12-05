@@ -55,20 +55,28 @@ h1,h3,h5
   background: $lt_green
   border-bottom: 10px solid $md_green
   .menu
+    a
+      padding: $gutter*2 $gutter $gutter
+      display: block
+      color: $white
+      text-transform: uppercase
+      font-size: 18px
+      &:hover
+        background: $ltmd_green
+        color: $yellow
     ul
       text-align: right
       li
         display: inline-block
         vertical-align: top
-        a
-          padding: $gutter*2 $gutter $gutter
-          display: block
-          color: $white
-          text-transform: uppercase
-          font-size: 18px
-          &:hover
-            background: $ltmd_green
-            color: $yellow
+        text-align: center
+        .menu-overlay
+          position: absolute
+          top: 100px
+          z-index: 9
+          display: none
+          li
+            display: block
 
 //Front Page
 

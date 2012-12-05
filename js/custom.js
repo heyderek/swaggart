@@ -25,4 +25,8 @@ $(document).ready(function(){
   $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
+  //Navigation
+  $('.menu ul li a').click(function(){
+    $(this).next('div.menu-overlay').slideDown();
+  });
 });
