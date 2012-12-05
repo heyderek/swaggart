@@ -579,9 +579,7 @@ h1, h3, h5 {
       .colophon .flexslider .slides li h4 {
         margin: 0 10px;
         text-shadow: 0 -1px 3px white;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        width: 65%; }
+        white-space: nowrap; }
       .colophon .flexslider .slides li .button {
         padding: 0 20px; }
       .colophon .flexslider .slides li span {
