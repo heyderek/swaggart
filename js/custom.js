@@ -27,6 +27,13 @@ $(document).ready(function(){
   });
   //Navigation
   $('.menu ul li a').click(function(){
-    $(this).next('div.menu-overlay').slideDown();
+    $('.featured-content .flexslider').css('opacity', '.5');
+    $(this).next().addClass('open');
+    if($(this).next().hasClass('open')){
+      $('div.menu-overlay').slideUp().removeClass('open');
+      $(this).next().slideDown();
+    }else{
+      $(this).next().removeClass('open').slideUp();
+    }
   });
 });
