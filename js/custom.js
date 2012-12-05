@@ -21,7 +21,7 @@ $(document).ready(function(){
     animationSpeed: 300,
     controlNav: false
   });
-  //Move the controls container within the dom.
+  //Move the controls container within the dom (just for the footer slideshow).
   $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
