@@ -431,6 +431,17 @@ h1, h3, h5 {
 .masthead {
   background: #a9cf54;
   border-bottom: 10px solid #588f27; }
+  .masthead .branding h1, .masthead .branding h2 {
+    position: absolute;
+    text-indent: -9999em; }
+  .masthead .branding .logo {
+    width: 18.75em;
+    padding: 10px;
+    position: absolute;
+    z-index: 3; }
+    .masthead .branding .logo img {
+      max-width: 100%;
+      height: auto; }
   .masthead .menu a {
     padding: 20px;
     display: block;
