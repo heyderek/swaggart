@@ -424,7 +424,7 @@ h1, h3, h5 {
 
 .big-button {
   background: #588f27;
-  padding: 20px;
+  padding: 30px 20px;
   display: block;
   color: white; }
 
@@ -495,9 +495,7 @@ h1, h3, h5 {
     left: 0; }
   .featured-content .flexslider .caption {
     position: absolute;
-    top: 35%;
     width: 28.75em;
-    left: 8.75em;
     color: #003300; }
     .featured-content .flexslider .caption h3 {
       font-size: 62px;
@@ -522,20 +520,35 @@ h1, h3, h5 {
         font-size: 38px;
         display: block;
         font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .featured-content .flexslider .blktnt {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px; }
+    .featured-content .flexslider .blktnt h3 {
+      text-shadow: 2px 2px 0 #003300;
+      white-space: normal; }
+  .featured-content .flexslider .left {
+    left: 8.75em; }
+  .featured-content .flexslider .right {
+    right: 8.75em; }
+  .featured-content .flexslider .bottom {
+    bottom: 8.75em; }
+  .featured-content .flexslider .top {
+    top: 8.75em; }
 
-.content {
+.content h1, .content h3, .content h5 {
+  text-transform: uppercase; }
+.content p {
+  margin: 0 0 20px 0;
   line-height: 1.35; }
-  .content h1, .content h3, .content h5 {
-    text-transform: uppercase; }
-  .content p {
-    margin: 0 0 20px 0; }
-  .content ul, .content ol {
-    margin: 0 0 20px 10px;
-    padding: 0 0 0 10px; }
-  .content ul {
-    list-style: disc outside; }
-  .content ol {
-    list-style: decimal outside; }
+.content ul, .content ol {
+  margin: 0 0 20px 10px;
+  padding: 0 0 0 10px;
+  line-height: 1.35; }
+.content ul {
+  list-style: disc outside; }
+.content ol {
+  list-style: decimal outside; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;

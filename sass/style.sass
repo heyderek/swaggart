@@ -45,7 +45,7 @@ h1,h3,h5
 
 .big-button
   background: $md_green
-  padding: $gutter
+  padding: 30px $gutter
   display: block
   color: $white
 
@@ -126,9 +126,7 @@ h1,h3,h5
         left: 0
     .caption
       position: absolute
-      top: 35%
       width: $cols6
-      left: $cols2
       color: $drk_green
       h3
         font-size: 62px
@@ -153,19 +151,34 @@ h1,h3,h5
           font-size: 38px
           display: block
           @include open_sansbold
-
+    .blktnt
+      background: $blktnt
+      color: $white
+      padding: $gutter
+      h3
+        text-shadow: 2px 2px 0 $drk_green
+        white-space: normal
+    .left
+      left: $cols2
+    .right
+      right: $cols2
+    .bottom
+      bottom: $cols2
+    .top
+      top: $cols2
 
 //Content
 
 .content
-  line-height: 1.35
   h1,h3,h5
     text-transform: uppercase
   p
     margin: 0 0 $gutter 0
+    line-height: 1.35
   ul,ol
     margin: 0 0 $gutter 10px
     padding: 0 0 0 10px
+    line-height: 1.35
   ul
     list-style: disc outside
   ol
