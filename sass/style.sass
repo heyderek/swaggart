@@ -43,12 +43,6 @@ h1,h3,h5
   border: 2px solid $md_green
   color: $white
 
-.big-button
-  background: $md_green
-  padding: 30px $gutter
-  display: block
-  color: $white
-
 //Header
 
 .masthead
@@ -86,9 +80,23 @@ h1,h3,h5
           padding: $gutter*2 $gutter $gutter
         .menu-overlay
           position: absolute
-          top: 100px
+          padding: $gutter
+          top: 100%
           z-index: 9
+          left: $cols10
           display: none
+          width: $cols6
+          text-align: left
+          .nav-head, ul
+            display: inline-block
+            vertical-align: top
+            box-sizing: border-box
+          h4
+            color: $white
+            font-size: 24px
+            text-transform: uppercase
+          img
+            border: 5px solid $white
           li
             display: block
 
@@ -96,7 +104,7 @@ h1,h3,h5
 
 .featured-content
   .flexslider
-    background: $lt_green
+    background: #000
     box-shadow: none
     border: none
     margin-bottom: 0
@@ -133,10 +141,15 @@ h1,h3,h5
         text-shadow: 2px 2px 0 $white
         white-space: nowrap
       .big-button
+        background: $md_green
+        padding: $gutter
+        display: block
+        color: $white
         text-align: right
         position: relative
         width: $cols3 - 3em
         font-size: 24px
+        line-height: 1.35
         z-index: 9
         &:after
           content: ""

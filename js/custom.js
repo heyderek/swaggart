@@ -27,10 +27,10 @@ $(document).ready(function(){
   });
   //Navigation
   $('.menu ul li a').click(function(){
-    $('.featured-content .flexslider').fadeTo(500, '.5');
+    $('.featured-content .flexslider .flex-viewport').fadeTo(100, '.45');
     $(this).next().addClass('open');
     $('.close').click(function(){
-      $('.featured-content .flexslider').css('opacity', '1');
+      $('.featured-content .flexslider .flex-viewport').css('opacity', '1');
       $('div.menu-overlay').slideUp();
     });
     if($(this).next().hasClass('open')){
