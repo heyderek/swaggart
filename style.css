@@ -478,7 +478,7 @@ h1, h3, h5 {
     background-size: 100%;
     content: "";
     width: 100%;
-    height: 100%;
+    height: 15%;
     position: absolute;
     z-index: 3;
     bottom: 0; }
@@ -505,7 +505,8 @@ h1, h3, h5 {
       text-align: right;
       position: relative;
       width: 10.75em;
-      font-size: 24px; }
+      font-size: 24px;
+      z-index: 9; }
       .featured-content .flexslider .caption .big-button:after {
         content: "";
         border-color: transparent transparent transparent #588f27;
