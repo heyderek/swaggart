@@ -25,8 +25,6 @@ $(document).ready(function(){
   $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
-  
-  
   //Navigation
   $('.menu li > a').click(function(){
     var child = $(this).parent().find('.menu-overlay');
