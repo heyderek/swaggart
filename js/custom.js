@@ -26,7 +26,7 @@ $(document).ready(function(){
     $(this).appendTo('.footer-nav-container');
   });
   //Navigation
-  $('.menu ul li a').click(function(){
+  $('.menu ul li > a').click(function(){
     $('.featured-content .flexslider .flex-viewport').fadeTo(100, '.45');
     $(this).next().addClass('open');
     $('.close').click(function(){
