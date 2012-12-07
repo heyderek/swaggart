@@ -41,12 +41,14 @@ $(document).ready(function(){
   });  
 */
   
-  $('.menu ul li > a').click(function(){
-    if($(this).parent('li').has('.menu-overlay')){
+  $('.menu li > a').click(function(){
+    var child = $(this).parent().find('.map-overlay');
+    
+    if(child.length > 0){
       alert('I have a child!');
     }
     $('.featured-content .flexslider .flex-viewport').fadeTo(100, '.45');
-    $(this).next();
+    //$(this).next();
     $('.close').click(function(){
       $('.featured-content .flexslider .flex-viewport').css('opacity', '1');
       $('.menu-overlay').slideUp();
