@@ -42,7 +42,7 @@ $(document).ready(function(){
 */
   
   $('.menu li > a').click(function(){
-    var child = $(this).parent().find('.map-overlay');
+    var child = $(this).parent().find('.menu-overlay');
     
     if(child.length > 0){
       alert('I have a child!');
