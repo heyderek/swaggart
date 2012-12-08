@@ -588,18 +588,27 @@ h1, h3, h5 {
       height: auto;
       position: relative; }
   .page-content .primary, .page-content .secondary {
+    font-size: 16px;
     display: inline-block;
     box-sizing: border-box;
     white-space: nowrap;
-    vertical-align: top; }
+    vertical-align: top;
+    background: white;
+    padding: 20px;
+    border-top: none;
+    border-right: 5px solid #cccccc;
+    border-bottom: none;
+    border-left: 5px solid #cccccc; }
     .page-content .primary > *, .page-content .secondary > * {
       white-space: normal; }
   .page-content .primary {
-    width: 58.75em;
-    background: white; }
+    width: 58.75em; }
   .page-content .secondary {
     width: 18.75em;
-    background: white; }
+    margin-bottom: 20px;
+    border-bottom: 5px solid #cccccc;
+    border-right: none;
+    margin-right: -5px; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;

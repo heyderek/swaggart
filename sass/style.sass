@@ -12,6 +12,7 @@ $lt_green: #A9CF54
 $ltmd_green: #8BB745
 $md_green: #588F27
 $drk_green: #003300
+$cees: #ccc
 $blktnt: rgba(0,0,0,.5)
 
 //General
@@ -222,18 +223,28 @@ h1,h3,h5
       height: auto
       position: relative
   .primary, .secondary
+    font-size: 16px
     display: inline-block
     box-sizing: border-box
     white-space: nowrap
     vertical-align: top
+    background: $white
+    padding: $gutter
+    border:
+      top: none
+      right: 5px solid $cees
+      bottom: none
+      left: 5px solid $cees
     &>*
       white-space: normal
   .primary
     width: $cols12
-    background: $white
   .secondary
     width: $cols4
-    background: $white
+    margin-bottom: $gutter
+    border-bottom: 5px solid $cees
+    border-right: none
+    margin-right: -5px
 
 //Sidebar
 
