@@ -13,6 +13,7 @@ $ltmd_green: #8BB745
 $md_green: #588F27
 $drk_green: #003300
 $cees: #ccc
+$sixes: #666
 $blktnt: rgba(0,0,0,.5)
 
 //General
@@ -186,8 +187,10 @@ h1,h3,h5
 //Content
 
 .content
+  color: $sixes
   h1,h3,h5
     text-transform: uppercase
+    font-size: 48px
   p
     margin: 0 0 $gutter 0
     line-height: 1.35
@@ -257,6 +260,27 @@ h1,h3,h5
     margin-right: -5px
 
 //Sidebar
+
+.secondary
+  .content
+    .ribbon
+      background: $lt_green
+      font-size: 42px
+      width: 90%
+      color: $white
+      padding: 10px $gutter*2
+      position: relative
+      margin-left: -40px
+      &:after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: -15px
+        display: block
+        border:
+          width: 15px 0 0 15px
+          style: solid
+          color: $drk_green  transparent transparent transparent
 
 //Footer
 

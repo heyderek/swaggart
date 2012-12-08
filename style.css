@@ -552,19 +552,22 @@ h1, h3, h5 {
     .featured-content .flexslider .top {
       top: 8.75em; }
 
-.content h1, .content h3, .content h5 {
-  text-transform: uppercase; }
-.content p {
-  margin: 0 0 20px 0;
-  line-height: 1.35; }
-.content ul, .content ol {
-  margin: 0 0 20px 10px;
-  padding: 0 0 0 10px;
-  line-height: 1.35; }
-.content ul {
-  list-style: disc outside; }
-.content ol {
-  list-style: decimal outside; }
+.content {
+  color: #666666; }
+  .content h1, .content h3, .content h5 {
+    text-transform: uppercase;
+    font-size: 48px; }
+  .content p {
+    margin: 0 0 20px 0;
+    line-height: 1.35; }
+  .content ul, .content ol {
+    margin: 0 0 20px 10px;
+    padding: 0 0 0 10px;
+    line-height: 1.35; }
+  .content ul {
+    list-style: disc outside; }
+  .content ol {
+    list-style: decimal outside; }
 
 .cover {
   background: rgba(0, 0, 0, 0.5);
@@ -620,6 +623,24 @@ h1, h3, h5 {
     border-bottom: 5px solid #cccccc;
     border-right: none;
     margin-right: -5px; }
+
+.secondary .content .ribbon {
+  background: #a9cf54;
+  font-size: 42px;
+  width: 90%;
+  color: white;
+  padding: 10px 40px;
+  position: relative;
+  margin-left: -40px; }
+  .secondary .content .ribbon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    display: block;
+    border-width: 15px 0 0 15px;
+    border-style: solid;
+    border-color: #003300 transparent transparent transparent; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
