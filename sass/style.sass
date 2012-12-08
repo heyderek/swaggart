@@ -95,18 +95,31 @@ h1,h3,h5
           display: none
           width: $cols6
           text-align: left
-          .nav-head, ul
+          .nav-thumb, ul
             display: inline-block
             vertical-align: top
             box-sizing: border-box
+          ul
+            padding: 0 0 0 20px
+            li
+              display: block
+            a
+              text-align: left
+              padding: 0 0 $gutter 0
+              &:hover
+                color: $lt_green
+                text-shadow: 0 -1px 3px $lt_green
+                background: none
           h4
             color: $white
-            font-size: 24px
+            font-size: 42px
             text-transform: uppercase
+            @include open_sans_condensedbold
           img
             border: 5px solid $white
-          li
+          .close
             display: block
+            margin: $gutter 0
 
 //Front Page
 
