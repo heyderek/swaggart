@@ -422,8 +422,12 @@ h1, h3, h5 {
   background: #a9cf54;
   color: white;
   padding: 10px 20px;
-  border: 2px solid #588f27;
-  color: white; }
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s linear; }
+  .button:hover {
+    background: #588f27; }
 
 .masthead {
   background: #a9cf54;
@@ -488,8 +492,11 @@ h1, h3, h5 {
         .masthead .menu ul li .menu-overlay img {
           border: 5px solid white; }
         .masthead .menu ul li .menu-overlay .close {
-          display: block;
-          margin: 20px 0; }
+          display: none;
+          margin: 20px 0;
+          position: absolute;
+          bottom: 0;
+          right: 0; }
 
 .featured-content {
   position: relative; }
@@ -761,7 +768,10 @@ h1, h3, h5 {
         text-shadow: 0 -1px 3px white;
         white-space: nowrap; }
       .colophon .flexslider .slides li .button {
-        padding: 0 20px; }
+        padding: 0 20px;
+        border: 2px solid #588f27; }
+        .colophon .flexslider .slides li .button:hover {
+          color: white; }
       .colophon .flexslider .slides li span {
         position: absolute;
         right: 20px;

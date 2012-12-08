@@ -48,8 +48,13 @@ h1,h3,h5
   background: $lt_green
   color: $white
   padding: 10px $gutter
-  border: 2px solid $md_green
   color: $white
+  text-transform: uppercase
+  border: none
+  transition: all .3s linear
+  &:hover
+    background: $md_green
+  
 
 //Header
 
@@ -118,8 +123,11 @@ h1,h3,h5
           img
             border: 5px solid $white
           .close
-            display: block
+            display: none
             margin: $gutter 0
+            position: absolute
+            bottom: 0
+            right: 0
 
 //Front Page
 
@@ -415,6 +423,9 @@ h1,h3,h5
           white-space: nowrap
         .button
           padding: 0 20px
+          border: 2px solid $md_green
+          &:hover
+            color: $white
         span
           position: absolute
           right: 20px
