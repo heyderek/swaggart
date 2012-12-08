@@ -12,6 +12,8 @@ $lt_green: #A9CF54
 $ltmd_green: #8BB745
 $md_green: #588F27
 $drk_green: #003300
+$ribbon_green: #719D51
+$ribbon_shadow: #4E8826
 $cees: #ccc
 $sixes: #666
 $blktnt: rgba(0,0,0,.5)
@@ -118,7 +120,7 @@ h1,h3,h5
         background-size: 100% 
         content: ""
         width: 100%
-        height: 15%
+        height: 10%
         position: absolute
         z-index: 3
         bottom: 0
@@ -191,6 +193,7 @@ h1,h3,h5
   h1,h3,h5
     text-transform: uppercase
     font-size: 48px
+    color: $drk_green
   p
     margin: 0 0 $gutter 0
     line-height: 1.35
@@ -264,23 +267,38 @@ h1,h3,h5
 .secondary
   .content
     .ribbon
-      background: $lt_green
+      background: $ribbon_green
       font-size: 42px
-      width: 90%
+      width: 100%
       color: $white
-      padding: 10px $gutter*2
+      padding: 10px $gutter
       position: relative
-      margin-left: -40px
+      margin-left: -35px
+      border:
+        width: 0 0 0 10px
+        style: solid
+        padding: 10px 0 0
+        color: transparent transparent transparent $ribbon_shadow
+      &:before
+        content: ""
+        left: -10px
+        position: absolute
+        top: 0
+        left: -10px
+        border:
+          width: 10px 0 0 10px
+          style: solid
+          color: $ribbon_green transparent transparent transparent
       &:after
         content: ""
         position: absolute
-        left: 0
-        bottom: -15px
+        left: -10px
+        bottom: -10px
         display: block
         border:
-          width: 15px 0 0 15px
+          width: 10px 0 0 10px
           style: solid
-          color: $drk_green  transparent transparent transparent
+          color: $ribbon_shadow  transparent transparent transparent
 
 //Footer
 
@@ -324,7 +342,7 @@ h1,h3,h5
         width: 25px
         content: ""
         position: absolute
-        left: -15px
+        left: -10px
         top: 0
         padding: 2px
         height: 100%
@@ -335,7 +353,7 @@ h1,h3,h5
         width: 25px
         content: ""
         position: absolute
-        right: -15px
+        right: -10px
         top: 0
         padding: 2px
         height: 100%
