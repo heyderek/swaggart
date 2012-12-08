@@ -25,17 +25,15 @@ $(document).ready(function(){
   $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
-  
-  
-  
-  
   //Navigation
   $('.menu li > a').click(function(){
     var child = $(this).parent().find('.menu-overlay');
     var coverUp = $(this).parents().find('.cover');
     
-          $(this).parents().find('.cover').remove();
-
+    coverUp.slideUp(300, function(){
+      $(this).remove();
+    })
+    
     if(child.length > 0){
       $('<div class="cover"></div>').slideDown(300).appendTo('.page-content, .featured-content');
     }
@@ -52,8 +50,4 @@ $(document).ready(function(){
       $(this).next().slideUp(300);
     }
   });
-  
-  
-  
-  
 });
