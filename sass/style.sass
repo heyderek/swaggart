@@ -198,6 +198,43 @@ h1,h3,h5
   ol
     list-style: decimal outside
 
+.page-content
+  background: url(images/bg_tile.png) $white
+  position: relative
+  .headerimg 
+    width: 100%
+    height: 100%
+    position: relative
+    &:after
+      width: 100%
+      background: url(images/main_slider_overlay.png) center bottom repeat-x
+      background-size: 100% 
+      left: 0
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 3
+      bottom: 0
+    img
+      width: 100%
+      z-index: 0
+      height: auto
+      position: relative
+  .primary, .secondary
+    display: inline-block
+    box-sizing: border-box
+    white-space: nowrap
+    vertical-align: top
+    &>*
+      white-space: normal
+  .primary
+    width: $cols12
+    background: $white
+  .secondary
+    width: $cols4
+    background: $white
+
 //Sidebar
 
 //Footer

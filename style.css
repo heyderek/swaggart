@@ -564,6 +564,43 @@ h1, h3, h5 {
 .content ol {
   list-style: decimal outside; }
 
+.page-content {
+  background: url(images/bg_tile.png) white;
+  position: relative; }
+  .page-content .headerimg {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .page-content .headerimg:after {
+      width: 100%;
+      background: url(images/main_slider_overlay.png) center bottom repeat-x;
+      background-size: 100%;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0; }
+    .page-content .headerimg img {
+      width: 100%;
+      z-index: 0;
+      height: auto;
+      position: relative; }
+  .page-content .primary, .page-content .secondary {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    vertical-align: top; }
+    .page-content .primary > *, .page-content .secondary > * {
+      white-space: normal; }
+  .page-content .primary {
+    width: 58.75em;
+    background: white; }
+  .page-content .secondary {
+    width: 18.75em;
+    background: white; }
+
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
   color: white; }

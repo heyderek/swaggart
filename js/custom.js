@@ -28,7 +28,7 @@ $(document).ready(function(){
   //Navigation
   $('.menu li > a').click(function(){
     var child = $(this).parent().find('.menu-overlay');
-    
+
     if(child.length > 0){
       $('.featured-content .flexslider .flex-viewport').fadeTo(100, '.45');
     }
