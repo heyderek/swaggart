@@ -432,7 +432,7 @@ h1, h3, h5 {
     width: 18.75em;
     padding: 10px;
     position: absolute;
-    z-index: 3; }
+    z-index: 11; }
     .masthead .branding .logo img {
       max-width: 100%;
       height: auto; }
@@ -457,7 +457,7 @@ h1, h3, h5 {
         position: absolute;
         padding: 20px;
         top: 100%;
-        z-index: 9;
+        z-index: 12;
         left: 48.75em;
         display: none;
         width: 28.75em;
@@ -475,80 +475,82 @@ h1, h3, h5 {
         .masthead .menu ul li .menu-overlay li {
           display: block; }
 
-.featured-content .flexslider {
-  background: black;
-  box-shadow: none;
-  border: none;
-  margin-bottom: 0; }
-  .featured-content .flexslider .flex-viewport:after {
-    width: 100%;
-    background: url(images/main_slider_overlay.png) center bottom repeat-x;
-    background-size: 100%;
-    content: "";
-    width: 100%;
-    height: 15%;
-    position: absolute;
-    z-index: 3;
-    bottom: 0; }
-  .featured-content .flexslider .slides li {
-    position: relative; }
-  .featured-content .flexslider .flex-direction-nav a {
-    width: 100px;
-    height: 100px; }
-  .featured-content .flexslider .flex-direction-nav .flex-next {
-    background: url(images/arrow_right.png) center center;
-    right: 0; }
-  .featured-content .flexslider .flex-direction-nav .flex-prev {
-    background: url(images/arrow_left.png) center center;
-    left: 0; }
-  .featured-content .flexslider .caption {
-    position: absolute;
-    width: 28.75em;
-    color: #003300; }
-    .featured-content .flexslider .caption h3 {
-      font-size: 62px;
-      text-shadow: 2px 2px 0 white;
-      white-space: nowrap; }
-    .featured-content .flexslider .caption .big-button {
-      background: #588f27;
-      padding: 20px;
-      display: block;
+.featured-content {
+  position: relative; }
+  .featured-content .flexslider {
+    background: #588f27;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0; }
+    .featured-content .flexslider .flex-viewport:after {
+      width: 100%;
+      background: url(images/main_slider_overlay.png) center bottom repeat-x;
+      background-size: 100%;
+      content: "";
+      width: 100%;
+      height: 15%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0; }
+    .featured-content .flexslider .slides li {
+      position: relative; }
+    .featured-content .flexslider .flex-direction-nav a {
+      width: 100px;
+      height: 100px; }
+    .featured-content .flexslider .flex-direction-nav .flex-next {
+      background: url(images/arrow_right.png) center center;
+      right: 0; }
+    .featured-content .flexslider .flex-direction-nav .flex-prev {
+      background: url(images/arrow_left.png) center center;
+      left: 0; }
+    .featured-content .flexslider .caption {
+      position: absolute;
+      width: 28.75em;
+      color: #003300; }
+      .featured-content .flexslider .caption h3 {
+        font-size: 62px;
+        text-shadow: 2px 2px 0 white;
+        white-space: nowrap; }
+      .featured-content .flexslider .caption .big-button {
+        background: #588f27;
+        padding: 20px;
+        display: block;
+        color: white;
+        text-align: right;
+        position: relative;
+        width: 10.75em;
+        font-size: 24px;
+        line-height: 1.35;
+        z-index: 9; }
+        .featured-content .flexslider .caption .big-button:after {
+          content: "";
+          border-color: transparent transparent transparent #588f27;
+          border-style: solid;
+          border-width: 62px;
+          display: block;
+          position: absolute;
+          right: -124px;
+          top: 0; }
+        .featured-content .flexslider .caption .big-button span {
+          text-transform: uppercase;
+          font-size: 38px;
+          display: block;
+          font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .featured-content .flexslider .blktnt {
+      background: rgba(0, 0, 0, 0.5);
       color: white;
-      text-align: right;
-      position: relative;
-      width: 10.75em;
-      font-size: 24px;
-      line-height: 1.35;
-      z-index: 9; }
-      .featured-content .flexslider .caption .big-button:after {
-        content: "";
-        border-color: transparent transparent transparent #588f27;
-        border-style: solid;
-        border-width: 62px;
-        display: block;
-        position: absolute;
-        right: -124px;
-        top: 0; }
-      .featured-content .flexslider .caption .big-button span {
-        text-transform: uppercase;
-        font-size: 38px;
-        display: block;
-        font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .featured-content .flexslider .blktnt {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 20px; }
-    .featured-content .flexslider .blktnt h3 {
-      text-shadow: 2px 2px 0 #003300;
-      white-space: normal; }
-  .featured-content .flexslider .left {
-    left: 8.75em; }
-  .featured-content .flexslider .right {
-    right: 8.75em; }
-  .featured-content .flexslider .bottom {
-    bottom: 8.75em; }
-  .featured-content .flexslider .top {
-    top: 8.75em; }
+      padding: 20px; }
+      .featured-content .flexslider .blktnt h3 {
+        text-shadow: 2px 2px 0 #003300;
+        white-space: normal; }
+    .featured-content .flexslider .left {
+      left: 8.75em; }
+    .featured-content .flexslider .right {
+      right: 8.75em; }
+    .featured-content .flexslider .bottom {
+      bottom: 8.75em; }
+    .featured-content .flexslider .top {
+      top: 8.75em; }
 
 .content h1, .content h3, .content h5 {
   text-transform: uppercase; }
@@ -563,6 +565,15 @@ h1, h3, h5 {
   list-style: disc outside; }
 .content ol {
   list-style: decimal outside; }
+
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
 
 .page-content {
   background: url(images/bg_tile.png) white;

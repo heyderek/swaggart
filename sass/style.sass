@@ -57,7 +57,7 @@ h1,h3,h5
       width: $cols4
       padding: 10px
       position: absolute
-      z-index: 3
+      z-index: 11
       img
         max-width: 100%
         height: auto
@@ -83,7 +83,7 @@ h1,h3,h5
           position: absolute
           padding: $gutter
           top: 100%
-          z-index: 9
+          z-index: 12
           left: $cols10
           display: none
           width: $cols6
@@ -104,8 +104,9 @@ h1,h3,h5
 //Front Page
 
 .featured-content
+  position: relative
   .flexslider
-    background: #000
+    background: $md_green
     box-shadow: none
     border: none
     margin-bottom: 0
@@ -198,6 +199,15 @@ h1,h3,h5
     list-style: disc outside
   ol
     list-style: decimal outside
+
+.cover
+  background: $blktnt
+  position: absolute
+  z-index: 10
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
 
 .page-content
   background: url(images/bg_tile.png) $white
