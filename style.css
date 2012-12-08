@@ -401,7 +401,10 @@ body {
 
 a {
   text-decoration: none;
+  color: #588f27;
   transition: all 0.3s linear; }
+  a:hover {
+    color: #003300; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -540,9 +543,10 @@ h1, h3, h5 {
       background: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 20px; }
-      .featured-content .flexslider .blktnt h3 {
+      .featured-content .flexslider .blktnt h1, .featured-content .flexslider .blktnt h3, .featured-content .flexslider .blktnt h5 {
         text-shadow: 2px 2px 0 #003300;
-        white-space: normal; }
+        white-space: normal;
+        color: white; }
     .featured-content .flexslider .left {
       left: 8.75em; }
     .featured-content .flexslider .right {
@@ -655,6 +659,15 @@ h1, h3, h5 {
     border-width: 10px 0 0 10px;
     border-style: solid;
     border-color: #4e8826 transparent transparent transparent; }
+.secondary .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0; }
+  .secondary .menu li {
+    padding: 10px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #cccccc transparent transparent transparent; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;

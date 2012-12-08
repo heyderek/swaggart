@@ -5,10 +5,10 @@ $(document).ready(function(){
     animation: "slide",
     controlNav: false,
     start: function(animatingTo){
-      $('.caption').fadeIn(3000);
+      $('.caption').fadeIn(300);
     },
     after: function(animatingTo){
-      $('.caption').fadeIn(3000);
+      $('.caption').fadeIn(300);
     },
     before: function(animatingTo){
       $('.caption').hide();
@@ -19,6 +19,7 @@ $(document).ready(function(){
     animation: "slide",
     slideshowSpeed: 3000,
     animationSpeed: 300,
+    pauseOnHover: true,
     controlNav: false
   });
   //Move the controls container within the dom (just for the footer slideshow).

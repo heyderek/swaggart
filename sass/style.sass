@@ -27,7 +27,10 @@ body
   @include open_sansregular
 a
   text-decoration: none
+  color: $md_green
   transition: all .3s linear
+  &:hover
+    color: $drk_green
 h1,h2,h3,h4,h5,h6
   font-weight: normal
   margin: 0 0 $gutter 0
@@ -174,9 +177,10 @@ h1,h3,h5
       background: $blktnt
       color: $white
       padding: $gutter
-      h3
+      h1, h3, h5
         text-shadow: 2px 2px 0 $drk_green
         white-space: normal
+        color: $white
     .left
       left: $cols2
     .right
@@ -299,6 +303,17 @@ h1,h3,h5
           width: 10px 0 0 10px
           style: solid
           color: $ribbon_shadow  transparent transparent transparent
+
+  .menu
+    list-style: none
+    padding: 0
+    margin: 0 0 $gutter 0
+    li
+      padding: 10px
+      border:
+        width: 1px
+        style: dotted
+        color: $cees transparent transparent transparent
 
 //Footer
 
