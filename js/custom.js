@@ -36,7 +36,7 @@ $(document).ready(function(){
     })
     
     if(child.length > 0){
-      $('<div class="cover"></div>').slideDown(300).appendTo('.page-content, .featured-content');
+      $('<div class="cover"></div>').appendTo('.page-content, .featured-content');
     }
     $('.close').click(function(){
       $('.menu-overlay').slideUp(300);
