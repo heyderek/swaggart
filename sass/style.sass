@@ -16,6 +16,7 @@ $ribbon_green: #719D51
 $ribbon_shadow: #4E8826
 $cees: #ccc
 $sixes: #666
+$threes: #333
 $blktnt: rgba(0,0,0,.5)
 
 //General
@@ -123,7 +124,7 @@ h1,h3,h5
         background-size: 100% 
         content: ""
         width: 100%
-        height: 10%
+        height: 15%
         position: absolute
         z-index: 3
         bottom: 0
@@ -309,11 +310,17 @@ h1,h3,h5
     padding: 0
     margin: 0 0 $gutter 0
     li
-      padding: 10px
-      border:
-        width: 1px
-        style: dotted
-        color: $cees transparent transparent transparent
+      a
+        padding: 10px
+        color: $threes
+        display: block
+        border:
+          width: 1px
+          style: dotted
+          color: $cees transparent transparent transparent
+        &:hover
+          background: $lt_green
+          color: $drk_green
 
 //Footer
 
