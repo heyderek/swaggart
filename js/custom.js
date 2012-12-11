@@ -35,6 +35,10 @@ $(document).ready(function(){
       $(this).remove();
     })
     
+    if(child.Length > 0){
+      $(this).find('a').alert('found it');
+    }
+    
     if(child.length > 0){
       $('<div class="cover"></div>').appendTo('.page-content, .featured-content');
     }
