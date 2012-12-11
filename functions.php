@@ -12,7 +12,7 @@ function setup_theme_features(){
 add_action('after_setup_theme', 'setup_theme_features');
 
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
-class swaggart_mega_menu extends Walker_Nav_Menu {
+class Menu_With_Description extends Walker_Nav_Menu {
     function start_el(&$output, $item, $depth, $args) {
         global $wp_query;
 
@@ -36,9 +36,9 @@ class swaggart_mega_menu extends Walker_Nav_Menu {
         $attr_defaults = array( 'class' => 'nav_thumb' , 'alt' => esc_attr( $item->attr_title ) , 'title' => esc_attr( $item->attr_title ) );
         $attr = isset( $args->thumbnail_attr ) ? $args->thumbnail_attr : '';
         $attr = wp_parse_args( $attr , $attr_defaults );
- 
+
         $item_output = $args->before;
-        
+
         // thumbnail image output
         $item_output .= ( isset( $args->thumbnail_link ) && $args->thumbnail_link ) ? '<a' . $attributes . '>' : '';
         $item_output .= apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth );		
@@ -58,6 +58,19 @@ class swaggart_mega_menu extends Walker_Nav_Menu {
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
 }
+
+add_filter( 'wp_nav_menu_args' , 'my_add_menu_descriptions' );
+function my_add_menu_descriptions( $args ) {
+  $args['walker'] = new Menu_With_Description;
+  $args['desc_depth'] = 0;
+  $args['thumbnail'] = true;
+  $args['thumbnail_link'] = false;
+  $args['thumbnail_size'] = 'thumbnail';
+  $args['thumbnail_attr'] = array( 'class' => 'nav_thumb my_thumb' , 'alt' => 'test' , 'title' => 'test' );
+
+return $args;
+}
+
 
 /*
 //Load Options Framework

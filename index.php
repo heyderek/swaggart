@@ -6,13 +6,16 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <?php wp_nav_menu(array(
+    <!--
+<?php wp_nav_menu(array(
       'theme_location'=>'primary',
       'container' => 'nav',
       'depth' => 3,
-      'walker' => new swaggart_mega_menu
+      'walker' => new Menu_With_Description
       ));
     ?>
+-->
+  <?php wp_nav_menu() ?>
   </body>
   <?php wp_footer(); ?>
 </html>
