@@ -13,7 +13,6 @@ add_action('after_setup_theme', 'setup_theme_features');
 
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
 class Menu_With_Description extends Walker_Nav_Menu {
-
   function start_el(&$output, $item, $depth, $args) {
     global $wp_query;
 
@@ -27,8 +26,8 @@ class Menu_With_Description extends Walker_Nav_Menu {
 
     $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
     $class_names = ' class="' . esc_attr( $class_names ) . '"';
-
-    $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+    
+    $output .= "\n" . $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>' . "\n";
 
     $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
     $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
@@ -63,12 +62,3 @@ function my_add_menu_descriptions( $args ) {
 return $args;
 
 }
-
-
-/*
-//Load Options Framework
-if ( !function_exists( 'optionsframework_init' ) ) {
-	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
-	require_once dirname( __FILE__ ) . '/inc/options-framework.php';
-}
-*/
