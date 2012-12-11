@@ -44,7 +44,7 @@ class Menu_With_Description extends Walker_Nav_Menu {
     
     $item_output .= ( $args->display_depth >= $depth ) ? '<div class="menu-overlay">' . '<h4>'. $item->title . '</h4>' . apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : '';
     
-    $item_output .= $args->link_before . '<a'. $attributes .'>' . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after . '</a>';
+    $item_output .= (1 <= $depth) ? $args->link_before . '<a'. $attributes .'>' . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after . '</a>' : '';
     
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     $item_output .= '</div>';
