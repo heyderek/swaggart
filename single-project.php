@@ -17,6 +17,7 @@
       </aside>
     </section><!-- /.secondary -->
     <section class="primary content">
+    single project
       <?php while(have_posts()) : the_post(); ?>
       <article>
         <h1><?php the_title(); ?></h1>

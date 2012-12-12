@@ -35,10 +35,10 @@ function project_custom_init() {
     'show_ui' => true,
     'show_in_menu' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'project'),
+    'rewrite' => true,
     'capability_type' => 'post',
     'has_archive' => true,
-    'hierarchical' => true,
+    'hierarchical' => false,
     'menu_position' => 5,
     'menu_icon' => '/images/application-text-image.png',
     'supports' => array('title', 'editor', 'revisions', 'thumbnail')
