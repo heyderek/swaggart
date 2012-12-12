@@ -30,7 +30,7 @@ $(document).ready(function(){
   var haveMenu = $('nav.menu ul li').find('.menu-overlay');
   
   if(haveMenu.length > 0){
-    $('.menu-main-menu ul li').find('a').attr('href', '#');
+    $('nav.menu ul li').find('a').attr('href', '#');
   }
   
   //Navigation
