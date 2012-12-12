@@ -17,12 +17,25 @@
       </aside>
     </section><!-- /.secondary -->
     <section class="primary content">
-      <?php while(have_posts()) : the_post(); ?>
-      <article>
-        <h1><?php the_title(); ?></h1>
-        <?php the_content(); ?>
+
+          <article>
+        <?php 
+            $args=array(
+              'public'   => true,
+              '_builtin' => false
+              
+            ); 
+            $output = 'objects'; // or objects
+            $operator = 'and'; // 'and' or 'or'
+            $taxonomies=get_taxonomies($args,$output,$operator); 
+            if  ($taxonomies) {
+              foreach ($taxonomies  as $taxonomy ) {
+                echo '<p>'. $taxonomy. '</p>';
+              }
+            }
+        ?>
       </article>
-      <?php endwhile; ?>
+
     </section><!-- /.primary -->
   </div>
 </section><!-- /.page-content -->
