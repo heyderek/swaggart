@@ -26,7 +26,7 @@ $(document).ready(function(){
   $('footer .flex-direction-nav').html(function(){
     $(this).appendTo('.footer-nav-container');
   });
-  
+  //Swap Nav items to hashes for dropdown-overlay functionality.
   var haveMenu = $('nav.menu ul li').find('.menu-overlay');
   if(haveMenu.length > 0){
     $('#menu-main-menu > li > a').attr('href', '#');
