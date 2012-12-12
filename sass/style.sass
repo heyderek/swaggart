@@ -74,7 +74,7 @@ h1,h3,h5
         max-width: 100%
         height: auto
   .menu
-    a
+    a, span
       padding: $gutter
       display: block
       color: $white
@@ -89,8 +89,10 @@ h1,h3,h5
         display: inline-block
         vertical-align: top
         text-align: center
-        a
+        a, span
           padding: $gutter*2 $gutter $gutter
+          &:hover
+            cursor: pointer
         .menu-overlay
           position: absolute
           padding: $gutter

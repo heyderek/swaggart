@@ -443,13 +443,13 @@ h1, h3, h5 {
     .masthead .branding .logo img {
       max-width: 100%;
       height: auto; }
-  .masthead .menu a {
+  .masthead .menu a, .masthead .menu span {
     padding: 20px;
     display: block;
     color: white;
     text-transform: uppercase;
     font-size: 18px; }
-    .masthead .menu a:hover {
+    .masthead .menu a:hover, .masthead .menu span:hover {
       background: #8bb745;
       color: #e1e6b9; }
   .masthead .menu ul {
@@ -458,8 +458,10 @@ h1, h3, h5 {
       display: inline-block;
       vertical-align: top;
       text-align: center; }
-      .masthead .menu ul li a {
+      .masthead .menu ul li a, .masthead .menu ul li span {
         padding: 40px 20px 20px; }
+        .masthead .menu ul li a:hover, .masthead .menu ul li span:hover {
+          cursor: pointer; }
       .masthead .menu ul li .menu-overlay {
         position: absolute;
         padding: 20px;

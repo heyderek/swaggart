@@ -12,6 +12,7 @@ function setup_theme_features(){
 add_action('after_setup_theme', 'setup_theme_features');
 
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
+
 class Menu_With_Description extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth, $args) {
     global $wp_query;
