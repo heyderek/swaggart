@@ -28,7 +28,6 @@ $(document).ready(function(){
   });
   
   var haveMenu = $('nav.menu ul li').find('.menu-overlay');
-  
   if(haveMenu.length > 0){
     $('#menu-main-menu > li > a').attr('href', '#');
   }
@@ -36,22 +35,16 @@ $(document).ready(function(){
   //Navigation
   $('.menu li > a').click(function(){
     var child = $(this).parent().find('.menu-overlay');
-    var coverUp = $(this).parents().find('.cover');
-    
-    coverUp.slideUp(300, function(){
-      $(this).remove();
-    })
-    
-    if(child.length > 0){
-      $('<div class="cover"></div>').appendTo('.page-content, .featured-content');
-    }
-    $(this).click(function(){
-      $('.menu-overlay').slideUp(300);
-      $('.cover').slideUp(300, function(){
-        $(this).remove();
-      })
+    var coverUp = $('.page-content, .featured-content').has('.cover');
 
-    })
+    if(child.length > 0){
+      /* $('<div class="cover"></div>').appendTo('.page-content, .featured-content'); */
+      if(coverUp.length > 0){
+      }else{
+        $('<div class="cover"></div>').appendTo('.page-content, .featured-content');
+      }
+    }
+
 /*
     $('.close').click(function(){
       $('.menu-overlay').slideUp(300);
