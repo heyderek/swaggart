@@ -29,7 +29,9 @@ $(document).ready(function(){
   
   var haveMenu = $('nav.menu ul li').find('.menu-overlay');
   
-  $('#menu-main-menu > li > a').attr('href', '#');
+  if(haveMenu.length > 0){
+    $('#menu-main-menu > li > a').attr('href', '#');
+  }
   
   //Navigation
   $('.menu li > a').click(function(){
