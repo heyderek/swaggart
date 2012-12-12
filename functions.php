@@ -11,6 +11,70 @@ function setup_theme_features(){
 
 add_action('after_setup_theme', 'setup_theme_features');
 
+//Add Projects Post Type
+function project_custom_init() {
+  $labels = array(
+    'name' => 'Projects',
+    'singular_name' => 'Project',
+    'add_new' => 'Add New',
+    'add_new_item' => 'Add New Project',
+    'edit_item' => 'Edit Project',
+    'new_item' => 'New Project',
+    'all_items' => 'All Projects',
+    'view_item' => 'View Project',
+    'search_items' => 'Search Projects',
+    'not_found' => 'No projects found',
+    'not_found_in_trash' => 'No projects found in trash.',
+    'parent_item_colon' => '',
+    'menu_name' => 'Projects'
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'project'),
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => true,
+    'menu_position' => 5,
+    'menu_icon' => '/images/application-text-image.png',
+    'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+  );
+  register_post_type('project', $args);
+}
+
+add_action('init', 'project_custom_init');
+
+function project_tax_init() {
+  $labels = array(
+    'name' => _x('Classification','taxonomy general name'),
+    'singular_name' => _x('Classification', 'taxonomy singular name'),
+    'search_items' => __('Search Classes'),
+    'all_items' => __('All Classes'),
+    'parent_item' => __('Parent Classification'),
+    'parent_item_colon' => __('Parent Classification:'),
+    'edit_item' => __('Edit Classification'),
+    'update_item' => __('Update Classification'),
+    'add_new_item' => __('Add New Classification'),
+    'new_item_name' => __('New Classification Name'),
+    'menu_name' => __('Classes'),
+  );
+  register_taxonomy('Classification',array('project'),array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'classification'),
+  ));
+}
+
+add_action('init', 'project_tax_init', 0);
+
+
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
 
 class Menu_With_Description extends Walker_Nav_Menu {
