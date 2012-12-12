@@ -31,7 +31,7 @@
           <hgroup class="branding">
             <h1><?php bloginfo('name'); ?></h1>
             <h2><?php bloginfo('description'); ?></h2>
-            <a href="<?php the_permalink(); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
+            <a href="<?php echo home_url('/'); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
           </hgroup><!-- /.branding -->
           <?php wp_nav_menu(); ?>
         </header><!-- /.wrapper -->
