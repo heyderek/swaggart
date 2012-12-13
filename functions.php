@@ -207,8 +207,8 @@ add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
  */
 function cmb_sample_metaboxes( array $meta_boxes ) {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_cmb_';
+  // Start with an underscore to hide fields from custom fields list
+  $prefix = '_cmb_';
 
 	$meta_boxes[] = array(
 		'id'         => 'slide_details',
@@ -227,7 +227,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'Caption Text',
 				'desc' => 'Caption text (appears beneath slide heading).',
-				'id'   => $prefix . 'test_textareasmall',
+				'id'   => $prefix . 'caption_text',
 				'type' => 'textarea_small',
 			),
 			array(
@@ -239,192 +239,43 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'Button Subtext',
 				'desc' => 'Text displayed below the button heading (secondary text).',
-				'id'   => $prefix . 'button_heading',
+				'id'   => $prefix . 'button_subtext',
 				'type' => 'text_medium',
 			),
 			array(
-				'name' => 'Caption Position',
-				'desc' => 'Define where the caption displays.',
-				'id'   => $prefix . 'caption_position',
-				'type' => 'title',
-			),
-			
-			
-			array(
-				'name' => 'Test Text Small',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textsmall',
-				'type' => 'text_small',
-			),
-			array(
-				'name' => 'Test Text Medium',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textmedium',
-				'type' => 'text_medium',
-			),
-			array(
-				'name' => 'Test Date Picker',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textdate',
-				'type' => 'text_date',
-			),
-			array(
-				'name' => 'Test Date Picker (UNIX timestamp)',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textdate_timestamp',
-				'type' => 'text_date_timestamp',
-			),
-			array(
-				'name' => 'Test Date/Time Picker Combo (UNIX timestamp)',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_datetime_timestamp',
-				'type' => 'text_datetime_timestamp',
-			),
-			array(
-	            'name' => 'Test Time',
-	            'desc' => 'field description (optional)',
-	            'id'   => $prefix . 'test_time',
-	            'type' => 'text_time',
-	        ),
-			array(
-				'name' => 'Test Money',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textmoney',
-				'type' => 'text_money',
-			),
-			array(
-	            'name' => 'Test Color Picker',
-	            'desc' => 'field description (optional)',
-	            'id'   => $prefix . 'test_colorpicker',
-	            'type' => 'colorpicker',
-				'std'  => '#ffffff'
-	        ),
-			array(
-				'name' => 'Test Text Area',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textarea',
-				'type' => 'textarea',
-			),
-			array(
-				'name' => 'Test Text Area Code',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textarea_code',
-				'type' => 'textarea_code',
-			),
-			array(
-				'name' => 'Test Title Weeeee',
-				'desc' => 'This is a title description',
-				'id'   => $prefix . 'test_title',
+				'name' => 'Caption Details',
+				'desc' => 'Caption position and display options',
+				'id'   => $prefix . 'caption_details',
 				'type' => 'title',
 			),
 			array(
-				'name'    => 'Test Select',
-				'desc'    => 'field description (optional)',
-				'id'      => $prefix . 'test_select',
-				'type'    => 'select',
+				'name'		=> 'Caption Position',
+				'desc'		=> 'Caption&rsquo;s position within page.  Select all that apply.',
+				'id'		=> $prefix . 'caption_position',
+				'type'		=> 'multicheck',
 				'options' => array(
-					array( 'name' => 'Option One', 'value' => 'standard', ),
-					array( 'name' => 'Option Two', 'value' => 'custom', ),
-					array( 'name' => 'Option Three', 'value' => 'none', ),
+					'top' => 'Top',
+					'right' => 'Right',
+					'bottom' => 'Bottom',
+					'left' => 'Left',
 				),
 			),
 			array(
-				'name'    => 'Test Radio inline',
-				'desc'    => 'field description (optional)',
-				'id'      => $prefix . 'test_radio_inline',
+				'name'    => 'Caption Background',
+				'desc'    => 'Use background for caption?',
+				'id'      => $prefix . 'caption_bg',
 				'type'    => 'radio_inline',
 				'options' => array(
-					array( 'name' => 'Option One', 'value' => 'standard', ),
-					array( 'name' => 'Option Two', 'value' => 'custom', ),
-					array( 'name' => 'Option Three', 'value' => 'none', ),
+					array( 'name' => 'Yes', 'value' => 'blktnt', ),
+					array( 'name' => 'No', 'value' => '', ),
 				),
-			),
-			array(
-				'name'    => 'Test Radio',
-				'desc'    => 'field description (optional)',
-				'id'      => $prefix . 'test_radio',
-				'type'    => 'radio',
-				'options' => array(
-					array( 'name' => 'Option One', 'value' => 'standard', ),
-					array( 'name' => 'Option Two', 'value' => 'custom', ),
-					array( 'name' => 'Option Three', 'value' => 'none', ),
-				),
-			),
-			array(
-				'name'     => 'Test Taxonomy Radio',
-				'desc'     => 'Description Goes Here',
-				'id'       => $prefix . 'text_taxonomy_radio',
-				'type'     => 'taxonomy_radio',
-				'taxonomy' => '', // Taxonomy Slug
-			),
-			array(
-				'name'     => 'Test Taxonomy Select',
-				'desc'     => 'Description Goes Here',
-				'id'       => $prefix . 'text_taxonomy_select',
-				'type'     => 'taxonomy_select',
-				'taxonomy' => '', // Taxonomy Slug
-			),
-			array(
-				'name'		=> 'Test Taxonomy Multi Checkbox',
-				'desc'		=> 'field description (optional)',
-				'id'		=> $prefix . 'test_multitaxonomy',
-				'type'		=> 'taxonomy_multicheck',
-				'taxonomy'	=> '', // Taxonomy Slug
-			),
-			array(
-				'name' => 'Test Checkbox',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_checkbox',
-				'type' => 'checkbox',
-			),
-			array(
-				'name'    => 'Test Multi Checkbox',
-				'desc'    => 'field description (optional)',
-				'id'      => $prefix . 'test_multicheckbox',
-				'type'    => 'multicheck',
-				'options' => array(
-					'check1' => 'Check One',
-					'check2' => 'Check Two',
-					'check3' => 'Check Three',
-				),
-			),
-			array(
-				'name'    => 'Test wysiwyg',
-				'desc'    => 'field description (optional)',
-				'id'      => $prefix . 'test_wysiwyg',
-				'type'    => 'wysiwyg',
-				'options' => array(	'textarea_rows' => 5, ),
-			),
-			array(
-				'name' => 'Test Image',
-				'desc' => 'Upload an image or enter an URL.',
-				'id'   => $prefix . 'test_image',
-				'type' => 'file',
 			),
 		),
 	);
 
-	$meta_boxes[] = array(
-		'id'         => 'about_page_metabox',
-		'title'      => 'About Page Metabox',
-		'pages'      => array( 'page', ), // Post type
-		'context'    => 'normal',
-		'priority'   => 'high',
-		'show_names' => true, // Show field names on the left
-		'show_on'    => array( 'key' => 'id', 'value' => array( 2, ), ), // Specific post IDs to display this metabox
-		'fields' => array(
-			array(
-				'name' => 'Test Text',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_text',
-				'type' => 'text',
-			),
-		)
-	);
+// Add other metaboxes as needed
 
-	// Add other metaboxes as needed
-
-	return $meta_boxes;
+  return $meta_boxes;
 }
 
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
@@ -433,7 +284,7 @@ add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
  */
 function cmb_initialize_cmb_meta_boxes() {
 
-	if ( ! class_exists( 'cmb_Meta_Box' ) )
-		require_once 'init.php';
+  if ( ! class_exists( 'cmb_Meta_Box' ) )
+    require_once 'init.php';
 
 }
