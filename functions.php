@@ -6,7 +6,7 @@ $defaults = array(
   'height' => 190
 );
 add_theme_support('custom-header', $defaults);
-add_image_size('homepage-feature', 1300, 645, true);
+add_image_size('homepage-feature', 1300, 645, true );
 
 //Add Navigation
 function setup_theme_features(){
@@ -219,11 +219,37 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields'     => array(
 			array(
-				'name' => 'Test Text',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_text',
+				'name' => 'Slide Heading',
+				'desc' => 'Heading for the slide (appears on top of caption in block letters).',
+				'id'   => $prefix . 'slide_title',
 				'type' => 'text',
 			),
+			array(
+				'name' => 'Caption Text',
+				'desc' => 'Caption text (appears beneath slide heading).',
+				'id'   => $prefix . 'test_textareasmall',
+				'type' => 'textarea_small',
+			),
+			array(
+				'name' => 'Button Heading',
+				'desc' => 'Bold text to be displayed at the top of the button.',
+				'id'   => $prefix . 'button_heading',
+				'type' => 'text_medium',
+			),
+			array(
+				'name' => 'Button Subtext',
+				'desc' => 'Text displayed below the button heading (secondary text).',
+				'id'   => $prefix . 'button_heading',
+				'type' => 'text_medium',
+			),
+			array(
+				'name' => 'Caption Position',
+				'desc' => 'Define where the caption displays.',
+				'id'   => $prefix . 'caption_position',
+				'type' => 'title',
+			),
+			
+			
 			array(
 				'name' => 'Test Text Small',
 				'desc' => 'field description (optional)',
@@ -278,12 +304,6 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => 'field description (optional)',
 				'id'   => $prefix . 'test_textarea',
 				'type' => 'textarea',
-			),
-			array(
-				'name' => 'Test Text Area Small',
-				'desc' => 'field description (optional)',
-				'id'   => $prefix . 'test_textareasmall',
-				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'Test Text Area Code',
