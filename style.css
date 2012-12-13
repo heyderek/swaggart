@@ -596,12 +596,14 @@ h1, h3, h5 {
     color: #003300; }
   .content h2, .content h4, .content h6 {
     font-size: 24px;
-    color: #333333; }
+    color: #333333;
+    font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .content blockquote {
     margin: 0 0 20px;
     background: #dddddd;
     padding: 10px;
-    border-radius: 8px; }
+    border-radius: 8px;
+    border: 1px solid #cccccc; }
   .content p {
     margin: 0 0 20px 0;
     line-height: 1.35; }
@@ -721,6 +723,9 @@ h1, h3, h5 {
     .secondary .menu li a:hover {
       background: #a9cf54;
       color: #003300; }
+  .secondary .menu li ul {
+    list-style: none;
+    margin: 0; }
 
 .colophon {
   background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;

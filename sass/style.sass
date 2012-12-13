@@ -238,11 +238,13 @@ h1,h3,h5
   h2,h4,h6
     font-size: 24px
     color: $threes
+    @include open_sansbold
   blockquote
     margin: 0 0 $gutter
     background: $dees
     padding: 10px
     border-radius: 8px
+    border: 1px solid $cees
     
   p
     margin: 0 0 $gutter 0
@@ -375,6 +377,9 @@ h1,h3,h5
         &:hover
           background: $lt_green
           color: $drk_green
+      ul
+        list-style: none
+        margin: 0
 
 //Footer
 

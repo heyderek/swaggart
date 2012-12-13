@@ -11,6 +11,20 @@ function setup_theme_features(){
 
 add_action('after_setup_theme', 'setup_theme_features');
 
+//Create Sidebars
+function create_secondary() {
+  register_sidebar(array(
+    'name' => __('Sidebar', ''),
+    'id' => 'sidebar-1',
+    'before_widget' => '<aside class="content">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="ribbon">',
+    'after_title' => '</h3>'
+  ));
+}
+
+add_action('init', 'create_secondary');
+
 //Add Projects Post Type
 function project_custom_init() {
   $labels = array(
@@ -118,7 +132,8 @@ class Menu_With_Description extends Walker_Nav_Menu {
 
 add_filter( 'wp_nav_menu_args' , 'my_add_menu_descriptions' );
 function my_add_menu_descriptions( $args ) {
-  $args['walker'] = new Menu_With_Description;
+/*   $args['walker'] = new Menu_With_Description; */
+  $args['theme_location'] = 'primary';
   $args['container'] = 'nav';
   $args['container_class'] = 'menu';
   $args['desc_depth'] = 0;
