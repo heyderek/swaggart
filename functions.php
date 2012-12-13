@@ -6,6 +6,7 @@ $defaults = array(
   'height' => 190
 );
 add_theme_support('custom-header', $defaults);
+add_image_size('homepage-feature', 1300, 465, true);
 
 //Add Navigation
 function setup_theme_features(){
@@ -61,7 +62,7 @@ function slider_custom_init() {
     'hierarchical' => false,
     'menu_position' => 60,
     'menu_icon' => $my_url . '/images/picture--arrow.png',
-    'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+    'supports' => array('title', 'revisions', 'thumbnail')
   );
   register_post_type('slider', $args);
 }
@@ -212,7 +213,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	$meta_boxes[] = array(
 		'id'         => 'test_metabox',
 		'title'      => 'Test Metabox',
-		'pages'      => array( 'page', ), // Post type
+		'pages'      => array( 'slider', ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true, // Show field names on the left
