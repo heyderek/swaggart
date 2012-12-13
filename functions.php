@@ -267,7 +267,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type'    => 'radio_inline',
 				'options' => array(
 					array( 'name' => 'Yes', 'value' => 'blktnt', ),
-					array( 'name' => 'No', 'value' => '0', ),
+					array( 'name' => 'No', 'value' => 'none', ),
 				),
 			),
 		),
