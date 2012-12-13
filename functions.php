@@ -30,6 +30,43 @@ function create_secondary() {
 
 add_action('init', 'create_secondary');
 
+//Add Slider Post Type
+function slider_custom_init() {
+  $labels = array(
+    'name' => 'Slider',
+    'singular_name' => 'Slide',
+    'add_new' => 'Add New',
+    'add_new_item' => 'Add New Slide',
+    'edit_item' => 'Edit Slide',
+    'new_item' => 'New Slide',
+    'all_items' => 'All Slides',
+    'view_item' => 'View Slide',
+    'search_items' => 'Search Slides',
+    'not_found' => 'No Slides found',
+    'not_found_in_trash' => 'No Slides found in trash.',
+    'parent_item_colon' => '',
+    'menu_name' => 'Slider'
+  );
+  $my_url = get_bloginfo('template_directory');
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false,
+    'hierarchical' => false,
+    'menu_position' => 60,
+    'menu_icon' => $my_url . '/images/picture--arrow.png',
+    'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+  );
+  register_post_type('slider', $args);
+}
+add_action('init', 'slider_custom_init');
+
 //Add Projects Post Type
 function project_custom_init() {
   $labels = array(
@@ -59,7 +96,7 @@ function project_custom_init() {
     'capability_type' => 'post',
     'has_archive' => true,
     'hierarchical' => false,
-    'menu_position' => 5,
+    'menu_position' => 20,
     'menu_icon' => $my_url . '/images/application-text-image.png',
     'supports' => array('title', 'editor', 'revisions', 'thumbnail')
   );
