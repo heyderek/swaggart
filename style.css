@@ -673,7 +673,8 @@ h1, h3, h5 {
     .page-content .primary > *, .page-content .secondary > * {
       white-space: normal; }
   .page-content .primary {
-    width: 58.75em; }
+    width: 58.75em;
+    min-height: 33.75em; }
   .page-content .secondary {
     width: 18.75em;
     margin-bottom: 20px;
