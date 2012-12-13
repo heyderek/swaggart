@@ -4,7 +4,8 @@
     <ul class="slides">
     <?php 
       $args = array(
-        'post_type' => 'slider'
+        'post_type' => 'slider',
+        'order' => 'ASC'
       );
       $slide = new WP_Query($args); ?>
       <?php while($slide->have_posts()) : $slide->the_post(); ?>
