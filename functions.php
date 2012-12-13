@@ -270,6 +270,12 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 					array( 'name' => 'No', 'value' => 'none', ),
 				),
 			),
+			array(
+				'name' => 'Button Link Destination',
+				'desc' => 'Where will the button link to?',
+				'id'   => $prefix . 'button_link',
+				'type' => 'text_medium',
+			),
 		),
 	);
 
