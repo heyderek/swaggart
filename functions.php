@@ -1,5 +1,5 @@
 <?php
-
+//Add basic theme support
 add_theme_support('post-thumbnails');
 $defaults = array(
   'width' => 1300,
@@ -211,8 +211,8 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	$prefix = '_cmb_';
 
 	$meta_boxes[] = array(
-		'id'         => 'test_metabox',
-		'title'      => 'Test Metabox',
+		'id'         => 'slide_details',
+		'title'      => 'Slide Details',
 		'pages'      => array( 'slider', ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',

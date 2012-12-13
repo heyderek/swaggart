@@ -5,22 +5,15 @@
             <ul class="slides">
             
             <?php 
-            $args = array(
-              'cat' => 1
-            );
-            
-            $news_query = new WP_Query($args);
-            
-            while($news_query->have_posts()) : $news_query->the_post();
-              echo '<li> <h4>' . get_the_title() . '</h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></li>';
-            endwhile; 
-            wp_reset_postdata();
+              $args = array(
+                'cat' => 1
+              );
+              $news_query = new WP_Query($args);
+              while($news_query->have_posts()) : $news_query->the_post();
+                echo '<li> <h4>' . get_the_title() . '</h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></li>';
+              endwhile; 
+              wp_reset_postdata();
             ?>
-            
-<!--
-              <li><h4>Slide Title will go here.</h4><span><a class="button" href="page.html">Read More &raquo;</a></span></li>
-              <li><h4>Slide Title will go here.</h4><span><a class="button" href="page.html">Read More &raquo;</a></span></li>
--->
             </ul><!-- /.slides -->
           </div><!-- /.flexslider -->
           <div class="footer-nav-container"></div><!-- /.footer-nav-container -->

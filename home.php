@@ -2,6 +2,12 @@
 <section class="featured-content">
   <div class="flexslider">
     <ul class="slides">
+    <?php 
+      $args = new WP_Query();
+    ?>
+    
+    
+    
       <li>
         <img src="<?php bloginfo('template_url'); ?>/images/slide_1.png" />
         <figure class="caption left bottom content">
