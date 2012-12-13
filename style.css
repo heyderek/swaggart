@@ -604,6 +604,8 @@ h1, h3, h5 {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #cccccc; }
+    .content blockquote p {
+      margin: 0; }
   .content p {
     margin: 0 0 20px 0;
     line-height: 1.35; }
