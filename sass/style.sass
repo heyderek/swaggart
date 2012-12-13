@@ -27,6 +27,7 @@ $drk_green: #003300
 $ribbon_green: #719D51
 $ribbon_shadow: #4E8826
 $cees: #ccc
+$dees: #ddd
 $sixes: #666
 $threes: #333
 $blktnt: rgba(0,0,0,.5)
@@ -234,6 +235,15 @@ h1,h3,h5
     text-transform: uppercase
     font-size: 48px
     color: $drk_green
+  h2,h4,h6
+    font-size: 24px
+    color: $threes
+  blockquote
+    margin: 0 0 $gutter
+    background: $dees
+    padding: 10px
+    border-radius: 8px
+    
   p
     margin: 0 0 $gutter 0
     line-height: 1.35
@@ -245,6 +255,13 @@ h1,h3,h5
     list-style: disc outside
   ol
     list-style: decimal outside
+
+.posts
+  margin: 0 0 $gutter
+  padding: 0 0 $gutter
+  border-bottom: 2px dotted $cees
+  &:last-child
+    border: none
 
 .cover
   background: $blktnt

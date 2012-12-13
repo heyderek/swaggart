@@ -28,6 +28,7 @@ function project_custom_init() {
     'parent_item_colon' => '',
     'menu_name' => 'Projects'
   );
+  $my_url = get_bloginfo('template_directory'); 
   $args = array(
     'labels' => $labels,
     'public' => true,
@@ -40,7 +41,7 @@ function project_custom_init() {
     'has_archive' => true,
     'hierarchical' => false,
     'menu_position' => 5,
-    'menu_icon' => '/images/application-text-image.png',
+    'menu_icon' => $my_url . '/images/application-text-image.png',
     'supports' => array('title', 'editor', 'revisions', 'thumbnail')
   );
   register_post_type('project', $args);

@@ -594,6 +594,14 @@ h1, h3, h5 {
     text-transform: uppercase;
     font-size: 48px;
     color: #003300; }
+  .content h2, .content h4, .content h6 {
+    font-size: 24px;
+    color: #333333; }
+  .content blockquote {
+    margin: 0 0 20px;
+    background: #dddddd;
+    padding: 10px;
+    border-radius: 8px; }
   .content p {
     margin: 0 0 20px 0;
     line-height: 1.35; }
@@ -605,6 +613,13 @@ h1, h3, h5 {
     list-style: disc outside; }
   .content ol {
     list-style: decimal outside; }
+
+.posts {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 2px dotted #cccccc; }
+  .posts:last-child {
+    border: none; }
 
 .cover {
   background: rgba(0, 0, 0, 0.5);
