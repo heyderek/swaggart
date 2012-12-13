@@ -20,9 +20,10 @@
             $link = get_post_meta($post->ID, '_cmb_button_link', true);
             ?>
           <figure class="caption <?php echo $position; ?> <?php echo $bg; ?> content">
-          <h3><?php echo $title; ?></h3>
+            <h3><?php echo $title; ?></h3>
             <p><?php echo $text; ?></p>
-          <a href="<?php echo $link; ?>" class="big-button"><span><?php echo $button; ?></span><?php echo $subtext; ?></a>
+            <a href="<?php echo $link; ?>" class="big-button"><span><?php echo $button; ?></span><?php echo $subtext; ?></a>
+          </figure>
         </li>
       <?php endwhile; ?>
     </ul><!-- /.slides -->
