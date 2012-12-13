@@ -686,6 +686,20 @@ h1, h3, h5 {
     border-right: none;
     margin-right: -5px; }
 
+.cat-thumbs {
+  position: relative;
+  margin: 0 0 20px;
+  border: 10px solid #a9cf54;
+  font-size: 0; }
+  .cat-thumbs h3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white; }
+  .cat-thumbs img {
+    width: 100%;
+    height: auto; }
+
 .secondary .content .ribbon {
   background: #719d51;
   font-size: 42px;

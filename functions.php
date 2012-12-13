@@ -7,6 +7,7 @@ $defaults = array(
 );
 add_theme_support('custom-header', $defaults);
 add_image_size('homepage-feature', 1300, 645, true );
+add_image_size('project-category', 900, 250, true );
 
 //Add Navigation
 function setup_theme_features(){
