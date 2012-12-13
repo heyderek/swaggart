@@ -5,16 +5,9 @@
   </div><!-- /.headerimg -->
   <div class="wrapper">
     <section class="secondary">
-      <aside class="content">
-        <h3 class="ribbon">Heading</h3>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </aside>
+      <?php do_action('before_sidebar'); ?>
+        <?php if(! dynamic_sidebar('sidebar-1')) : ?>
+      <?php endif; ?>
     </section><!-- /.secondary -->
     <section class="primary content">
       <?php while(have_posts()) : the_post(); ?>
