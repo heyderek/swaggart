@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="page-content">
   <div class="headerimg">
-    <img src="<?php bloginfo('template_url'); ?>/images/header.png" />
+    <img src="<?php header_image(); ?>" />
   </div><!-- /.headerimg -->
   <div class="wrapper">
     <section class="secondary">

@@ -1,6 +1,11 @@
 <?php
 
 add_theme_support('post-thumbnails');
+$defaults = array(
+  'width' => 1300,
+  'height' => 190
+);
+add_theme_support('custom-header', $defaults);
 
 //Add Navigation
 function setup_theme_features(){
