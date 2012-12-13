@@ -517,6 +517,8 @@ h1, h3, h5 {
     box-shadow: none;
     border: none;
     margin-bottom: 0; }
+    .featured-content .flexslider img {
+      height: auto; }
     .featured-content .flexslider .flex-viewport:after {
       width: 100%;
       background: url(images/main_slider_overlay.png) center bottom repeat-x;

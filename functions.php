@@ -6,7 +6,7 @@ $defaults = array(
   'height' => 190
 );
 add_theme_support('custom-header', $defaults);
-add_image_size('homepage-feature', 1300, 465, true);
+add_image_size('homepage-feature', 1300, 645, true);
 
 //Add Navigation
 function setup_theme_features(){
