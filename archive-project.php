@@ -10,7 +10,7 @@
       <?php endif; ?>
     </section><!-- /.secondary -->
     <section class="primary content">
-    <h1>Projects</h1>
+    <h1>Project Categories</h1>
     <?php 
       $post_type = 'project';
       // Get all the taxonomies for this post type

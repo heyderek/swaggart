@@ -12,10 +12,10 @@
     <section class="primary content">
       <header>
         <h2 class="cat-heading"><?php printf( __( '%s', '' ),  single_term_title( '', false ) ); ?></h2>
-          <?php
+          <p><?php
           $category_description = category_description();
             if ( ! empty( $category_description ) )
-            echo apply_filters( 'category_archive_meta', $category_description ); ?>
+            echo apply_filters( 'category_archive_meta', $category_description ); ?></p>
       </header>
       <?php while ( have_posts() ) : the_post(); ?>
         <a href="<?php the_permalink(); ?>">

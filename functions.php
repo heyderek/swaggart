@@ -105,7 +105,7 @@ function project_custom_init() {
   register_post_type('project', $args);
 }
 add_action('init', 'project_custom_init');
-
+add_action('init', 'project_tax_init', 0);
 function project_tax_init() {
   $labels = array(
     'name' => _x('Classification','taxonomy general name'),
@@ -121,15 +121,16 @@ function project_tax_init() {
     'menu_name' => __('Classes'),
   );
   register_taxonomy('classification',array('project'),array(
-    'hierarchical' => true,
     'labels' => $labels,
+    'public' => true,
     'show_ui' => true,
     'show_admin_column' => true,
+    'hierarchical' => true,
     'query_var' => true,
     'rewrite' => array('slug' => 'classification'),
   ));
 }
-add_action('init', 'project_tax_init', 0);
+
 
 //Flush and rewrite the permalinks on theme activation and deactivation.
 function my_rewrite_flush() {
