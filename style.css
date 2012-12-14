@@ -639,6 +639,9 @@ h1, h3, h5 {
   top: 0;
   transition: all 0.3s linear; }
 
+.gallery img {
+  height: auto; }
+
 .page-content {
   background: url(images/bg_tile.png) white;
   position: relative; }

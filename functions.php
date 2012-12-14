@@ -6,8 +6,9 @@ $defaults = array(
   'height' => 190
 );
 add_theme_support('custom-header', $defaults);
-add_image_size('homepage-feature', 1300, 645, true );
-add_image_size('project-category', 900, 250, true );
+add_image_size('homepage-feature', 1300, 645, true ); //Front page (large) images.
+add_image_size('project-category', 900, 250, true ); //Project Classification thumbnails (wide).
+add_image_size('gallery-thumbnail', 275, 275, true ); //Create a gallery thumbnail.
 
 //Add Navigation
 function setup_theme_features(){
@@ -15,7 +16,6 @@ function setup_theme_features(){
     'primary' => 'Primary Menu'
   ));
 }
-
 add_action('after_setup_theme', 'setup_theme_features');
 
 //Create Sidebars
@@ -29,7 +29,6 @@ function create_secondary() {
     'after_title' => '</h3>'
   ));
 }
-
 add_action('init', 'create_secondary');
 
 //Add Slider Post Type
@@ -104,7 +103,6 @@ function project_custom_init() {
   );
   register_post_type('project', $args);
 }
-
 add_action('init', 'project_custom_init');
 
 function project_tax_init() {
@@ -130,16 +128,15 @@ function project_tax_init() {
     'rewrite' => 'slug',
   ));
 }
-
 add_action('init', 'project_tax_init', 0);
 
+//Flush and rewrite the permalinks on theme activation and deactivation.
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
 add_action( 'after_switch_theme', 'my_rewrite_flush' );
 
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
-
 class Menu_With_Description extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth, $args) {
     global $wp_query;
@@ -178,6 +175,7 @@ class Menu_With_Description extends Walker_Nav_Menu {
   }
 }
 
+//Fix the stupid native gallery.
 add_filter( 'wp_nav_menu_args' , 'my_add_menu_descriptions' );
 function my_add_menu_descriptions( $args ) {
 /*   $args['walker'] = new Menu_With_Description; */
@@ -191,6 +189,112 @@ function my_add_menu_descriptions( $args ) {
   $args['thumbnail_attr'] = array( 'class' => 'nav_thumb my_thumb' , 'alt' => 'test' , 'title' => 'test' );
 return $args;
 
+}
+
+add_filter( 'post_gallery', 'my_post_gallery', 10, 2 );
+function my_post_gallery( $output, $attr) {
+    global $post, $wp_locale;
+
+    static $instance = 0;
+    $instance++;
+
+    extract(shortcode_atts(array(
+        'order'      => 'ASC',
+        'orderby'    => 'menu_order ID',
+        'id'         => $post->ID,
+        'itemtag'    => 'dl',
+        'icontag'    => 'dt',
+        'captiontag' => 'dd',
+        'columns'    => 4,
+        'size'       => 'gallery-thumbnail',
+        'include'    => '',
+        'exclude'    => ''
+    ), $attr));
+
+    $id = intval($id);
+    if ( 'RAND' == $order )
+        $orderby = 'none';
+
+    if ( !empty($include) ) {
+        $include = preg_replace( '/[^0-9,]+/', '', $include );
+        $_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+
+        $attachments = array();
+        foreach ( $_attachments as $key => $val ) {
+            $attachments[$val->ID] = $_attachments[$key];
+        }
+    } elseif ( !empty($exclude) ) {
+        $exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
+        $attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+    } else {
+        $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+    }
+
+    if ( empty($attachments) )
+        return '';
+
+    if ( is_feed() ) {
+        $output = "\n";
+        foreach ( $attachments as $att_id => $attachment )
+            $output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+        return $output;
+    }
+
+    $itemtag = tag_escape($itemtag);
+    $captiontag = tag_escape($captiontag);
+    $columns = intval($columns);
+    $itemwidth = $columns > 0 ? floor(100/$columns) : 100;
+    $float = is_rtl() ? 'right' : 'left';
+
+    $selector = "gallery-{$instance}";
+
+    $output = apply_filters('gallery_style', "
+        <style type='text/css'>
+            #{$selector} {
+                margin: auto;
+            }
+            #{$selector} .gallery-item {
+                float: {$float};
+                margin-top: 10px;
+                text-align: center;
+                width: {$itemwidth}%;           }
+            #{$selector} img {
+                border: 5px solid #fff;
+                box-shadow: 1px 1px 3px #999;
+                border-radius: 8px;
+            }
+            #{$selector} .gallery-caption {
+                margin-left: 0;
+            }
+        </style>
+        <!-- see gallery_shortcode() in wp-includes/media.php -->
+        <div id='$selector' class='gallery galleryid-{$id}'>");
+
+    $i = 0;
+    foreach ( $attachments as $id => $attachment ) {
+        $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+
+        $output .= "<{$itemtag} class='gallery-item'>";
+        $output .= "
+            <{$icontag} class='gallery-icon'>
+                $link
+            </{$icontag}>";
+        if ( $captiontag && trim($attachment->post_excerpt) ) {
+            $output .= "
+                <{$captiontag} class='gallery-caption'>
+                " . wptexturize($attachment->post_excerpt) . "
+                </{$captiontag}>";
+        }
+        $output .= "</{$itemtag}>";
+        if ( $columns > 0 && ++$i % $columns == 0 )
+            $output .= '<br style="clear: both" />';
+    }
+
+    $output .= "
+            <br style='clear: both;' />
+        </div>\n";
+
+    return $output;
 }
 
 //Add Custom Meta Boxes
@@ -283,8 +387,6 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			),
 		),
 	);
-
-// Add other metaboxes as needed
 
   return $meta_boxes;
 }

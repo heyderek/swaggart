@@ -10,11 +10,20 @@
       <?php endif; ?>
     </section><!-- /.secondary -->
     <section class="primary content">
-    <?php while ( have_posts() ) : the_post(); ?>
-      <article class="posts">
-        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <?php the_content(); ?>
-      </article>
+      <header>
+        <h2 class="cat-heading"><?php printf( __( '%s', '' ),  single_term_title( '', false ) ); ?></h2>
+          <?php
+          $category_description = category_description();
+            if ( ! empty( $category_description ) )
+            echo apply_filters( 'category_archive_meta', $category_description ); ?>
+      </header>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <a href="<?php the_permalink(); ?>">
+          <article class="cat-thumbs">
+            <h3><?php the_title(); ?></h3>
+            <?php the_post_thumbnail('project-category'); ?>
+          </article><!-- /.posts -->
+        </a>
       <?php endwhile; ?>
     </section><!-- /.primary -->
   </div>
