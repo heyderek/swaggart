@@ -126,7 +126,7 @@ function project_tax_init() {
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,
-/*     'rewrite' => array('slug' => 'classification'), */
+    'rewrite' => array('slug' => 'classification'),
   ));
 }
 add_action('init', 'project_tax_init', 0);
