@@ -95,6 +95,7 @@ function project_custom_init() {
     'query_var' => true,
     'rewrite' => true,
     'capability_type' => 'post',
+    'taxonomies' => array('classification'),
     'has_archive' => true,
     'hierarchical' => false,
     'menu_position' => 20,
@@ -119,13 +120,13 @@ function project_tax_init() {
     'new_item_name' => __('New Classification Name'),
     'menu_name' => __('Classes'),
   );
-  register_taxonomy('Classification',array('project'),array(
+  register_taxonomy('classification',array('project'),array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'classification'),
+/*     'rewrite' => array('slug' => 'classification'), */
   ));
 }
 add_action('init', 'project_tax_init', 0);
