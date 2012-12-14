@@ -94,7 +94,7 @@ function project_custom_init() {
     'show_ui' => true,
     'show_in_menu' => true,
     'query_var' => true,
-    'rewrite' => true,
+    'rewrite' => 'slug',
     'capability_type' => 'post',
     'has_archive' => true,
     'hierarchical' => false,
@@ -127,12 +127,16 @@ function project_tax_init() {
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'hierarchical'),
+    'rewrite' => 'slug',
   ));
 }
 
 add_action('init', 'project_tax_init', 0);
 
+function my_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'my_rewrite_flush' );
 
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
 

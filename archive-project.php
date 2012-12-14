@@ -22,7 +22,7 @@
               $posts = new WP_Query( "taxonomy=$taxonomy&term=$term->slug&posts_per_page=1" );
               if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post();
                   //Do you general query loop here  
-                  echo '<article class="cat-thumbs"><h3>' . $term->name . '</h3>',  the_post_thumbnail('project-category'), '</article>';
+                  echo '<a href="'. site_url() . '/' .$term->slug.'"><article class="cat-thumbs"><h3>' . $term->name . '</h3>',  the_post_thumbnail('project-category'), '</article></a>';
               endwhile; endif;
           endforeach;
       endforeach;    
