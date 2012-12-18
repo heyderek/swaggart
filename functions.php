@@ -343,6 +343,13 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'   => $prefix . 'caption_text',
 				'type' => 'textarea_small',
 			),
+			
+			array(
+				'name' => 'Location Caption',
+				'desc' => 'The caption that displays location information for the image.',
+				'id'   => $prefix . 'location_info',
+				'type' => 'text_medium',
+			),
 			array(
 				'name' => 'Button Heading',
 				'desc' => 'Bold text to be displayed at the top of the button.',
