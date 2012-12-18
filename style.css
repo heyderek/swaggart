@@ -742,7 +742,9 @@ h1, h3, h5 {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: white; }
+  color: white;
+  text-transform: uppercase;
+  font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .secondary .content .ribbon {
   background: #719d51;
