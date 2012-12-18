@@ -288,8 +288,10 @@ function my_post_gallery( $output, $attr) {
                 </{$captiontag}>";
         }
         $output .= "</{$itemtag}>";
-        if ( $columns > 0 && ++$i % $columns == 0 )
+        /*
+if ( $columns > 0 && ++$i % $columns == 0 )
             $output .= '<br style="clear: both" />';
+*/
     }
 
     $output .= "
