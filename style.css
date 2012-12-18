@@ -573,6 +573,12 @@ h1, h3, h5 {
           font-size: 38px;
           display: block;
           font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .featured-content .flexslider .white {
+      color: white; }
+      .featured-content .flexslider .white h1, .featured-content .flexslider .white h3, .featured-content .flexslider .white h5 {
+        text-shadow: 2px 2px 0 #003300;
+        white-space: normal;
+        color: white; }
     .featured-content .flexslider .blktnt {
       background: rgba(0, 0, 0, 0.5);
       color: white;

@@ -384,6 +384,16 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				),
 			),
 			array(
+				'name'    => 'White Text',
+				'desc'    => 'Should the text be white for higher Contrast?',
+				'id'      => $prefix . 'caption_white',
+				'type'    => 'radio_inline',
+				'options' => array(
+					array( 'name' => 'Yes', 'value' => 'white', ),
+					array( 'name' => 'No', 'value' => 'none', ),
+				),
+			),
+			array(
 				'name' => 'Button Link Destination',
 				'desc' => 'Where will the button link to?',
 				'id'   => $prefix . 'button_link',

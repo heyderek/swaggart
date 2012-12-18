@@ -19,8 +19,9 @@
             $position = get_post_meta($post->ID, '_cmb_caption_position', true);
             $bg = get_post_meta($post->ID, '_cmb_caption_bg', true);
             $link = get_post_meta($post->ID, '_cmb_button_link', true);
+            $white = get_post_meta($post->ID, '_cmb_caption_white', true);
             ?>
-          <figure class="caption <?php echo $position; ?> <?php echo $bg; ?> content">
+          <figure class="caption <?php echo $position; ?> <?php echo $bg; ?> <?php echo $white; ?> content">
             <h3><?php echo $title; ?></h3>
             <p><?php echo $text; ?></p>
             <a href="<?php echo $link; ?>" class="big-button"><span><?php echo $button; ?></span><?php echo $subtext; ?></a>
