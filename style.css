@@ -479,7 +479,7 @@ h1, h3, h5 {
         z-index: 12;
         left: 48.75em;
         display: none;
-        width: 28.75em;
+        width: 38.75em;
         text-align: left; }
         .masthead .menu ul li .menu-overlay .nav-thumb, .masthead .menu ul li .menu-overlay ul {
           display: inline-block;
@@ -488,7 +488,20 @@ h1, h3, h5 {
         .masthead .menu ul li .menu-overlay ul {
           padding: 0 0 0 20px; }
           .masthead .menu ul li .menu-overlay ul li {
-            display: block; }
+            display: block;
+            position: relative; }
+            .masthead .menu ul li .menu-overlay ul li ul {
+              display: none; }
+            .masthead .menu ul li .menu-overlay ul li:hover ul {
+              display: block;
+              position: absolute;
+              padding-top: 10px;
+              margin-left: 10px;
+              top: 0;
+              left: 100%;
+              border-left: 1px solid white; }
+              .masthead .menu ul li .menu-overlay ul li:hover ul li {
+                white-space: nowrap; }
           .masthead .menu ul li .menu-overlay ul a {
             text-align: left;
             padding: 0 0 20px 0; }

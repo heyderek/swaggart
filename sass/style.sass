@@ -113,7 +113,7 @@ h1,h3,h5
           z-index: 12
           left: $cols10
           display: none
-          width: $cols6
+          width: $cols8
           text-align: left
           .nav-thumb, ul
             display: inline-block
@@ -123,6 +123,19 @@ h1,h3,h5
             padding: 0 0 0 20px
             li
               display: block
+              position: relative
+              ul
+                display: none
+              &:hover ul
+                display: block
+                position: absolute
+                padding-top: 10px
+                margin-left: 10px
+                top: 0
+                left: 100%
+                border-left: 1px solid $white
+                li
+                  white-space: nowrap
             a
               text-align: left
               padding: 0 0 $gutter 0
