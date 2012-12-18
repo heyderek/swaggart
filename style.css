@@ -727,6 +727,17 @@ h1, h3, h5 {
     width: 100%;
     height: auto; }
 
+.grid {
+  list-style: none; }
+  .grid li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width: 18.75em; }
+    .grid li img {
+      width: 100%;
+      height: auto; }
+
 .secondary .content .ribbon {
   background: #719d51;
   font-size: 42px;
