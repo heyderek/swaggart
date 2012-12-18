@@ -496,7 +496,6 @@ h1, h3, h5 {
               display: block;
               position: absolute;
               padding-top: 10px;
-              margin-left: 10px;
               top: 0;
               left: 100%;
               border-left: 1px solid white; }
@@ -504,7 +503,7 @@ h1, h3, h5 {
                 white-space: nowrap; }
           .masthead .menu ul li .menu-overlay ul a {
             text-align: left;
-            padding: 0 0 20px 0; }
+            padding: 0 10px 20px 0; }
             .masthead .menu ul li .menu-overlay ul a:hover {
               color: #a9cf54;
               text-shadow: 0 -1px 3px #a9cf54;
