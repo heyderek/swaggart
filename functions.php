@@ -258,8 +258,9 @@ function my_post_gallery( $output, $attr) {
             #{$selector} .gallery-item {
                 float: {$float};
                 margin-top: 10px;
+                margin-right: 20px;
                 text-align: center;
-                width: 33%;           }
+                width: 30%;           }
             #{$selector} img {
                 border: 5px solid #fff;
                 box-shadow: 1px 1px 3px #999;
