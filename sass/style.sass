@@ -111,9 +111,9 @@ h1,h3,h5
           padding: $gutter
           top: 100%
           z-index: 12
-          left: $cols10
           display: none
-          width: $cols8
+          right: 0
+          width: 50%
           text-align: left
           .nav-thumb, ul
             display: inline-block
@@ -586,14 +586,17 @@ h1,h3,h5
 
 @media screen and (min-width: 0) and (max-width: 1219px)
 
+  //General
   .wrapper
     width: $cols12
+  //Header
   .masthead 
     .branding 
       .logo
         width: $cols3
     .menu a
       font-size: 16px
+  //Front-page
   .featured-content
     position: relative
     .flexslider
@@ -619,3 +622,20 @@ h1,h3,h5
         top: $cols1
       .blktnt
         padding: 10px
+  //Content
+  .content
+    h1,h3,h5
+      font-size: 38px
+  .page-content
+    .primary
+      width: $cols9
+      min-height: $cols7
+    .secondary
+      width: $cols3
+  //Footer
+  .colophon .flexslider
+    width: $cols5
+
+
+
+

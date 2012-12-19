@@ -477,9 +477,9 @@ h1, h3, h5 {
         padding: 20px;
         top: 100%;
         z-index: 12;
-        left: 48.75em;
         display: none;
-        width: 38.75em;
+        right: 0;
+        width: 50%;
         text-align: left; }
         .masthead .menu ul li .menu-overlay .nav-thumb, .masthead .menu ul li .menu-overlay ul {
           display: inline-block;
@@ -962,4 +962,16 @@ h1, h3, h5 {
     .featured-content .flexslider .top {
       top: 3.75em; }
     .featured-content .flexslider .blktnt {
-      padding: 10px; } }
+      padding: 10px; }
+
+  .content h1, .content h3, .content h5 {
+    font-size: 38px; }
+
+  .page-content .primary {
+    width: 43.75em;
+    min-height: 33.75em; }
+  .page-content .secondary {
+    width: 13.75em; }
+
+  .colophon .flexslider {
+    width: 23.75em; } }
