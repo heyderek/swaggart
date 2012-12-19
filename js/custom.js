@@ -33,6 +33,8 @@ $(document).ready(function(){
     $('#menu-main-menu > li > a').attr('href', '#');
   }
   
+  $('<button class="button close">Close</button>').appendTo(haveMenu);
+  
   //Navigation
   $('.menu li > a').click(function(){
     var child = $(this).parent().find('.menu-overlay');
@@ -46,14 +48,12 @@ $(document).ready(function(){
       }
     }
 
-/*
     $('.close').click(function(){
       $('.menu-overlay').slideUp(300);
       $('.cover').slideUp(300, function(){
         $(this).remove();
       })
     });
-*/
     if($(this).next()){
       $('.menu-overlay').slideUp(300);
       $(this).next().slideDown(300);
