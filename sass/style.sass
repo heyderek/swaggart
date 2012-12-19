@@ -584,7 +584,38 @@ h1,h3,h5
 
 //Break Points
 
-@media screen and (min-width: 0px) and (max-width: 1219px)
+@media screen and (min-width: 0) and (max-width: 1219px)
 
   .wrapper
     width: $cols12
+  .masthead 
+    .branding 
+      .logo
+        width: $cols3
+    .menu a
+      font-size: 16px
+  .featured-content
+    position: relative
+    .flexslider
+      .caption
+        width: $cols4
+        h3
+          font-size: 42px
+        .big-button
+          padding: 10px
+          font-size: 18px
+          &:after
+            border-width: 42px
+            right: -84px
+          span
+            font-size: 28px
+      .left
+        left: $cols1
+      .right
+        right: $cols1
+      .bottom
+        bottom: $cols1
+      .top
+        top: $cols1
+      .blktnt
+        padding: 10px

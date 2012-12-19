@@ -930,6 +930,36 @@ h1, h3, h5 {
   text-align: right;
   margin: 60px 0 -20px; }
 
-@media screen and (min-width: 0px) and (max-width: 1219px) {
+@media screen and (min-width: 0) and (max-width: 1219px) {
   .wrapper {
-    width: 58.75em; } }
+    width: 58.75em; }
+
+  .masthead .branding .logo {
+    width: 13.75em; }
+  .masthead .menu a {
+    font-size: 16px; }
+
+  .featured-content {
+    position: relative; }
+    .featured-content .flexslider .caption {
+      width: 18.75em; }
+      .featured-content .flexslider .caption h3 {
+        font-size: 42px; }
+      .featured-content .flexslider .caption .big-button {
+        padding: 10px;
+        font-size: 18px; }
+        .featured-content .flexslider .caption .big-button:after {
+          border-width: 42px;
+          right: -84px; }
+        .featured-content .flexslider .caption .big-button span {
+          font-size: 28px; }
+    .featured-content .flexslider .left {
+      left: 3.75em; }
+    .featured-content .flexslider .right {
+      right: 3.75em; }
+    .featured-content .flexslider .bottom {
+      bottom: 3.75em; }
+    .featured-content .flexslider .top {
+      top: 3.75em; }
+    .featured-content .flexslider .blktnt {
+      padding: 10px; } }
