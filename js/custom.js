@@ -23,17 +23,27 @@ $(document).ready(function(){
     controlNav: false
   });
   //Move the controls container within the dom (just for the footer slideshow).
-  $('footer .flex-direction-nav').html(function(){
+  $('footer .flex-direction-nav').html(function(index){
     $(this).appendTo('.footer-nav-container');
   });
   
   //Swap Nav items to hashes for dropdown-overlay functionality.
-  var haveMenu = $('nav.menu ul li').find('.menu-overlay');
-  if(haveMenu.length > 0){
-    $('#menu-main-menu > li > a').attr('href', '#');
-  }
   
-  $('<button class="button close">Close</button>').appendTo(haveMenu);
+  jQuery.fn.log = function (msg) {
+      console.log("%s: %o", msg, this);
+      return this;
+  };
+
+  
+  var haveMenu = $('#menu-main-menu > li').find('.menu-overlay').log();
+  var addButton = $('nav.menu ul li').find('.menu-overlay');
+  
+  if(haveMenu.length > 0){
+    haveMenu.parent().find('> a').attr('href','#');
+  }
+
+  //Add the close button to applicable menus.
+  $('<button class="button close">Close</button>').appendTo(addButton);
   
   //Navigation
   $('.menu li > a').click(function(){
