@@ -40,7 +40,6 @@ $(document).ready(function(){
     haveMenu.parent().find('> a').attr('href','#');
   }
   
-  
   $('#menu-main-menu > li').each(function(){
     $(this).find('img').html(function(){
       $(this).prependTo($(this).next());
