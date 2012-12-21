@@ -140,17 +140,17 @@ add_action( 'after_switch_theme', 'my_rewrite_flush' );
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
 class Menu_With_Description extends Walker_Nav_Menu {
   
-  function start_lvl(&$output, $element, $item, $depth=0, $args=array()) {
+  function start_lvl(&$output, $element, $item, $max_depth, $depth=0, $args=array()) {
       
-      /* ( $element == 0 ) ? apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : ''; */
-      
-      $output .= ( $args->display_depth == 1 ) . '<div class="menu-overlay">';
+      $display_depth = ( $depth + 1);
+
+      $output .= ( $depth == 1 ) . '<div class="menu-overlay">';
 
       $output .= "\n<ul>\n";  
     }  
     function end_lvl(&$output, $depth=0, $args=array()) {  
       $output .= "</ul>\n";
-      $output .= ( $args->display_depth == 1 ) . '</div>';
+      $output .= ( $depth == 1 ) . '</div>';
     }
 
   function start_el(&$output, $item, $depth, $args) {
