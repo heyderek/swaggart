@@ -3,16 +3,11 @@
 class Menu_With_Description extends Walker_Nav_Menu {
   
   function start_lvl(&$output, $element, $item, $max_depth, $depth=0, $args=array()) {
-      
-      $display_depth = ( $depth + 1);
-
-      $output .= ( $depth == 1 ) . '<div class="menu-overlay">';
-
+  
       $output .= "\n<ul>\n";  
     }  
     function end_lvl(&$output, $depth=0, $args=array()) {  
       $output .= "</ul>\n";
-      $output .= ( $depth == 1 ) . '</div>';
     }
 
   function start_el(&$output, $item, $depth, $args) {
@@ -57,7 +52,7 @@ class Menu_With_Description extends Walker_Nav_Menu {
   }
 }
 
-//Fix the stupid native gallery.
+//Menu args
 add_filter( 'wp_nav_menu_args' , 'my_add_menu_descriptions' );
 function my_add_menu_descriptions( $args ) {
 /*   $args['walker'] = new Menu_With_Description; */

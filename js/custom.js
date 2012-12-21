@@ -33,6 +33,23 @@ $(document).ready(function(){
   };
   
   //Swap Nav items to hashes for dropdown-overlay functionality.
+  
+  
+  
+  
+  
+  haveChild = $('#menu-main-menu > li').has('ul');
+  
+/*   haveChild.log(); */
+  
+  if( haveChild.length > 0){
+    haveChild.each(function(){
+      $(this).children('ul').wrap('<div class="menu-overlay" />');
+    });
+  }  
+  
+  
+  
   var haveMenu = $('#menu-main-menu > li').find(' .menu-overlay');
   var addButton = $('nav.menu ul li').find('.menu-overlay');
   
