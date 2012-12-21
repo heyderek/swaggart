@@ -479,7 +479,7 @@ h1, h3, h5 {
         z-index: 12;
         display: none;
         right: 0;
-        width: 50%;
+        width: 65%;
         text-align: left; }
         .masthead .menu ul li .menu-overlay .nav-thumb, .masthead .menu ul li .menu-overlay ul {
           display: inline-block;
@@ -511,10 +511,15 @@ h1, h3, h5 {
               text-shadow: 0 -1px 3px #a9cf54;
               background: none; }
         .masthead .menu ul li .menu-overlay h4 {
-          color: white;
-          font-size: 42px;
-          text-transform: uppercase;
           font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+          .masthead .menu ul li .menu-overlay h4 a {
+            color: white;
+            font-size: 42px;
+            text-transform: uppercase;
+            cursor: cursor;
+            padding: 0; }
+            .masthead .menu ul li .menu-overlay h4 a:hover {
+              background: none; }
         .masthead .menu ul li .menu-overlay img {
           border: 5px solid white; }
         .masthead .menu ul li .menu-overlay .close {
@@ -623,6 +628,21 @@ h1, h3, h5 {
 .aligncenter {
   margin: 0 auto;
   display: inline-block; }
+
+.clear {
+  clear: both; }
+
+.wp-caption {
+  background: white;
+  padding: 10px; }
+  .wp-caption img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px; }
+  .wp-caption .wp-caption-text {
+    text-align: center;
+    margin: 0;
+    font-size: 14px; }
 
 .content {
   color: #666666; }

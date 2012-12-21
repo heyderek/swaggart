@@ -113,7 +113,7 @@ h1,h3,h5
           z-index: 12
           display: none
           right: 0
-          width: 50%
+          width: 65%
           text-align: left
           .nav-thumb, ul
             display: inline-block
@@ -145,10 +145,16 @@ h1,h3,h5
                 text-shadow: 0 -1px 3px $lt_green
                 background: none
           h4
-            color: $white
-            font-size: 42px
-            text-transform: uppercase
             @include open_sans_condensedbold
+            a
+              color: $white
+              font-size: 42px
+              text-transform: uppercase
+              cursor: cursor
+              padding: 0
+              &:hover
+                background: none
+
           img
             border: 5px solid $white
           .close
@@ -262,6 +268,21 @@ h1,h3,h5
 .aligncenter
   margin: 0 auto
   display: inline-block
+
+.clear
+  clear: both
+
+.wp-caption
+  background: $white
+  padding: 10px
+  img
+    width: 100%
+    height: auto
+    margin-bottom: 5px
+  .wp-caption-text
+    text-align: center
+    margin: 0
+    font-size: 14px
 
 .content
   color: $sixes

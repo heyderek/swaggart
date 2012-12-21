@@ -27,21 +27,41 @@ $(document).ready(function(){
     $(this).appendTo('.footer-nav-container');
   });
   
-  //Swap Nav items to hashes for dropdown-overlay functionality.
-  
   jQuery.fn.log = function (msg) {
       console.log("%s: %o", msg, this);
       return this;
   };
-
   
-  var haveMenu = $('#menu-main-menu > li').find('.menu-overlay').log();
+  //Swap Nav items to hashes for dropdown-overlay functionality.
+  var haveMenu = $('#menu-main-menu > li').find('.menu-overlay');
   var addButton = $('nav.menu ul li').find('.menu-overlay');
   
   if(haveMenu.length > 0){
     haveMenu.parent().find('> a').attr('href','#');
   }
-
+  
+  
+  $('#menu-main-menu > li').each(function(){
+    $(this).find('img').html(function(){
+      $(this).prependTo($(this).next());
+    });
+  });
+  
+  var anchors = $('#menu-main-menu > li > a');
+  
+  $.each(anchors, function(){ 
+    var sibling = $(this).next(), 
+        text = $(this).text();
+    /* text.log(); */
+    $(this).clone().prependTo(sibling).wrap('<h4 />');  
+  });
+  
+  
+  
+  
+  
+  
+  
   //Add the close button to applicable menus.
   $('<button class="button close">Close</button>').appendTo(addButton);
   

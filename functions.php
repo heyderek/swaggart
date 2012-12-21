@@ -131,7 +131,6 @@ function project_tax_init() {
   ));
 }
 
-
 //Flush and rewrite the permalinks on theme activation and deactivation.
 function my_rewrite_flush() {
     flush_rewrite_rules();
@@ -141,8 +140,12 @@ add_action( 'after_switch_theme', 'my_rewrite_flush' );
 //Extend Navigation with Custom Walker Class.  Add container if there is more than one child menu item.
 class Menu_With_Description extends Walker_Nav_Menu {
   
-  function start_lvl(&$output, $depth=0, $args=array()) {
+  function start_lvl(&$output, $element, $item, $depth=0, $args=array()) {
+      
+      /* ( $element == 0 ) ? apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : ''; */
+      
       $output .= ( $args->display_depth == 1 ) . '<div class="menu-overlay">';
+
       $output .= "\n<ul>\n";  
     }  
     function end_lvl(&$output, $depth=0, $args=array()) {  
@@ -155,7 +158,7 @@ class Menu_With_Description extends Walker_Nav_Menu {
 
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
     $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
-    $display_depth = ( $depth >= 1); // because it counts the first submenu as 0
+/*     $display_depth = ( $depth >= 1); // because it counts the first submenu as 0 */
 
     $class_names = $value = '';
 
@@ -177,13 +180,18 @@ class Menu_With_Description extends Walker_Nav_Menu {
     $attr = wp_parse_args( $attr , $attr_defaults );
     
     $item_output = $args->before;
+        
+    $item_output .= $args->link_before . '<a'. $attributes .'>' . apply_filters( 'the_title', $item->title, $item->ID );
     
-    $item_output .= $args->link_before . '<a'. $attributes .'>' . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after . '</a>';
+    $item_output .= $args->link_after . '</a>';
     
-/*     $item_output .= ( $args->display_depth >= $depth ) ? '<div class="menu-overlay">' . '<h4>'. $item->title . '</h4>' . apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : ''; */
+    $item_output .= ( $depth == 0 ) ? apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : '';
+
+    
+    /* ? apply_filters( 'menu_item_thumbnail' , ( isset( $args->thumbnail ) && $args->thumbnail ) ? get_the_post_thumbnail( $item->object_id , ( isset( $args->thumbnail_size ) ) ? $args->thumbnail_size : 'thumbnail' , $attr ) : '' , $item , $args , $depth ) : ''; */
     
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-    $item_output .= '</div>';
+
   }
 }
 
@@ -202,7 +210,6 @@ function my_add_menu_descriptions( $args ) {
 return $args;
 
 }
-
 
 //Add custom markup for gallery functionality.
 add_filter( 'post_gallery', 'my_post_gallery', 10, 2 );
