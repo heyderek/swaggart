@@ -447,6 +447,7 @@ h1, h3, h5 {
     text-indent: -9999em; }
   .masthead .branding .logo {
     width: 18.75em;
+    display: block;
     padding: 10px;
     position: absolute;
     z-index: 11; }
@@ -1006,13 +1007,16 @@ h1, h3, h5 {
     width: 18.75em; }
 
   .masthead .branding .logo {
-    width: 13.75em; }
+    width: 13.75em;
+    position: relative;
+    margin: 0 auto; }
   .masthead .menu ul {
     display: none; }
   .masthead .menu a {
     font-size: 16px; }
   .masthead .menu select {
-    display: block; }
+    display: block;
+    margin: 40px auto; }
 
   .featured-content {
     position: relative; }
