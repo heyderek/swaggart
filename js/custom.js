@@ -58,8 +58,6 @@ $(document).ready(function(){
   
   
   //Building the Nav Menu
-  
-  
   setTimeout(function(){
     var haveChild = $('#menu-main-menu > li').has('ul');
     
@@ -69,9 +67,7 @@ $(document).ready(function(){
         $(this).children('a').attr('href','#');
     });
   }
-
-
-    
+  
   var haveMenu = $('#menu-main-menu > li').find(' .menu-overlay'),
       addButton = $('nav.menu ul li').find('.menu-overlay');
 
@@ -89,11 +85,6 @@ $(document).ready(function(){
     /* text.log(); */
     $(this).clone().prependTo(sibling).wrap('<h4 />');  
   });
-  
-  
-  
-  
-  
   
   //Add the close button to applicable menus.
   $('<button class="button close">Close</button>').appendTo(addButton);

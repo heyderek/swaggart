@@ -1047,10 +1047,16 @@ h1, h3, h5 {
     font-size: 38px; }
 
   .page-content .primary {
-    width: 43.75em;
-    min-height: 33.75em; }
+    width: 100%;
+    min-height: 100%; }
   .page-content .secondary {
-    width: 13.75em; }
+    width: 100%;
+    display: none; }
+
+  .cat-thumbs {
+    border-width: 5px; }
+    .cat-thumbs h3 {
+      font-size: 25px; }
 
   .colophon .flexslider {
     width: 100%; } }
