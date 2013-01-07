@@ -13,7 +13,8 @@ add_image_size('gallery-thumbnail', 275, 275, true ); //Create a gallery thumbna
 //Add Navigation
 function setup_theme_features(){
   register_nav_menus(array(
-    'primary' => 'Primary Menu'
+    'primary' => 'Primary Menu',
+    'mobile' => 'Mobile Navigation'
   ));
 }
 add_action('after_setup_theme', 'setup_theme_features');

@@ -74,7 +74,6 @@ $(document).ready(function(){
   
   
   
-  
   //Add the close button to applicable menus.
   $('<button class="button close">Close</button>').appendTo(addButton);
   
@@ -104,4 +103,29 @@ $(document).ready(function(){
       $(this).next().slideUp(300);
     }
   });
+  
+  
+    //Grab the navigation, and create an options menu for mobile dropdown.
+  $(function() {
+    //Append the select element to the navigation
+    $("<select />").appendTo("nav");
+    $("<option />", {
+       "selected": "selected",
+       "value"   : "",
+       "text"    : "Go to..."
+    }).appendTo("nav select");
+    //Find the links within the nav, and convert them to options
+    $(".menu a").each(function() {
+     var navLink = $(this);
+    //Grab the values and attribute them to the proper option element
+    $("<option />", {
+         "value" : navLink.attr("href"),
+         "text" : navLink.text()
+     }).appendTo("nav select");
+    });
+    $("nav select").change(function() {
+      window.location = $(this).find("option:selected").val();
+    });
+    });
+  
 });

@@ -99,6 +99,8 @@ h1,h3,h5
       &:hover
         background: $ltmd_green
         color: $yellow
+    select
+      display: none
     ul
       text-align: right
       li
@@ -609,7 +611,7 @@ h1,h3,h5
 
 //Break Points
 
-@media screen and (min-width: 0) and (max-width: 1219px)
+@media screen and (min-width: 540) and (max-width: 1219px)
 
   //General
   .wrapper
@@ -661,6 +663,59 @@ h1,h3,h5
   .colophon .flexslider
     width: $cols5
 
+@media screen and (min-width: 0px) and (max-width: 539px)
 
-
-
+  //General
+  .wrapper
+    width: $cols4
+  //Header
+  .masthead 
+    .branding 
+      .logo
+        width: $cols3
+    .menu
+      ul
+        display: none
+      a
+        font-size: 16px
+      select
+        display: block
+  //Front-page
+  .featured-content
+    position: relative
+    .flexslider
+      .caption
+        width: $cols4
+        h3
+          font-size: 42px
+        .big-button
+          padding: 10px
+          font-size: 18px
+          &:after
+            border-width: 42px
+            right: -84px
+          span
+            font-size: 28px
+      .left
+        left: $cols1
+      .right
+        right: $cols1
+      .bottom
+        bottom: $cols1
+      .top
+        top: $cols1
+      .blktnt
+        padding: 10px
+  //Content
+  .content
+    h1,h3,h5
+      font-size: 38px
+  .page-content
+    .primary
+      width: $cols9
+      min-height: $cols7
+    .secondary
+      width: $cols3
+  //Footer
+  .colophon .flexslider
+    width: 100%
