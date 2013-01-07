@@ -453,6 +453,8 @@ h1, h3, h5 {
     .masthead .branding .logo img {
       max-width: 100%;
       height: auto; }
+  .masthead #menu-main-menu li > img {
+    display: none; }
   .masthead .menu a, .masthead .menu span {
     padding: 20px;
     display: block;

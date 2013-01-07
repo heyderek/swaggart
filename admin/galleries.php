@@ -14,7 +14,7 @@ function my_post_gallery( $output, $attr) {
         'itemtag'    => 'dl',
         'icontag'    => 'dt',
         'captiontag' => 'dd',
-        'columns'    => 4,
+        'columns'    => 3,
         'size'       => 'gallery-thumbnail',
         'include'    => '',
         'exclude'    => ''

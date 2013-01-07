@@ -32,36 +32,33 @@ $(document).ready(function(){
       return this;
   };
   
-  //Swap Nav items to hashes for dropdown-overlay functionality.
-  
-  
-  
-  
-  
-  haveChild = $('#menu-main-menu > li').has('ul');
-  
-/*   haveChild.log(); */
+  //Building the Nav Menu
+  var haveChild = $('#menu-main-menu > li').has('ul');
   
   if( haveChild.length > 0){
     haveChild.each(function(){
       $(this).children('ul').wrap('<div class="menu-overlay" />');
+      $(this).children('a').attr('href','#');
     });
-  }  
-  
-  
-  
-  var haveMenu = $('#menu-main-menu > li').find(' .menu-overlay');
-  var addButton = $('nav.menu ul li').find('.menu-overlay');
-  
-  if(haveMenu.length > 0){
-    haveMenu.parent().find('> a').attr('href','#');
   }
   
+  var haveMenu = $('#menu-main-menu > li').find(' .menu-overlay'),
+      addButton = $('nav.menu ul li').find('.menu-overlay');
+
   $('#menu-main-menu > li').each(function(){
     $(this).find('img').html(function(){
       $(this).prependTo($(this).next());
     });
   });
+  
+
+  
+  var flexWidth = $('footer .flexslider li > h4').width();
+
+
+  
+  
+  
   
   var anchors = $('#menu-main-menu > li > a');
   
