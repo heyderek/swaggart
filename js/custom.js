@@ -58,15 +58,20 @@ $(document).ready(function(){
   
   
   //Building the Nav Menu
-  var haveChild = $('#menu-main-menu > li').has('ul');
   
-  if( haveChild.length > 0){
-    haveChild.each(function(){
-      $(this).children('ul').wrap('<div class="menu-overlay" />');
-      $(this).children('a').attr('href','#');
+  
+  setTimeout(function(){
+    var haveChild = $('#menu-main-menu > li').has('ul');
+    
+    if( haveChild.length > 0){
+      haveChild.each(function(){
+        $(this).children('ul').wrap('<div class="menu-overlay" />');
+        $(this).children('a').attr('href','#');
     });
   }
-  
+
+
+    
   var haveMenu = $('#menu-main-menu > li').find(' .menu-overlay'),
       addButton = $('nav.menu ul li').find('.menu-overlay');
 
@@ -75,16 +80,7 @@ $(document).ready(function(){
       $(this).prependTo($(this).next());
     });
   });
-  
 
-  
-  var flexWidth = $('footer .flexslider li > h4').width();
-
-
-  
-  
-  
-  
   var anchors = $('#menu-main-menu > li > a');
   
   $.each(anchors, function(){ 
@@ -101,6 +97,8 @@ $(document).ready(function(){
   
   //Add the close button to applicable menus.
   $('<button class="button close">Close</button>').appendTo(addButton);
+  
+    }, 100)
   
   //Navigation
   $('.menu li > a').click(function(){
