@@ -32,17 +32,17 @@ $(document).ready(function(){
       return this;
   };
   
-  //Grab the navigation, and create an options menu for mobile dropdown.
+  //Grab the navigation, and create a select menu for mobile dropdown.
   $(function() {
     //Append the select element to the navigation
-    $("<select />").appendTo("nav");
+    $("<select />").appendTo("#access");
     $("<option />", {
        "selected": "selected",
        "value"   : "",
        "text"    : "Go to..."
     }).appendTo("nav select");
     //Find the links within the nav, and convert them to options
-    $(".menu a").each(function() {
+    $("#access .menu a").each(function() {
      var navLink = $(this);
     //Grab the values and attribute them to the proper option element
     $("<option />", {
@@ -54,8 +54,6 @@ $(document).ready(function(){
       window.location = $(this).find("option:selected").val();
     });
   });
-  
-  
   
   //Building the Nav Menu
   setTimeout(function(){
