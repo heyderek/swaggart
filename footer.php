@@ -10,7 +10,7 @@
               );
               $news_query = new WP_Query($args);
               while($news_query->have_posts()) : $news_query->the_post();
-                echo '<li> <h4>' . get_the_title() . '</h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></li>';
+                echo '<li><div class="ns-border-wrap"><h4>' . get_the_title() . '</h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></div></li>';
               endwhile; 
               wp_reset_postdata();
             ?>
@@ -29,7 +29,6 @@
           <?php wp_footer(); ?>
         </footer><!-- /.wrapper -->
       </section><!-- /.colophon -->
-        <div class="scroll">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
     </div><!-- /.page -->
   </body>
 </html>

@@ -28,24 +28,6 @@ $(document).ready(function(){
     $(this).appendTo('.footer-nav-container');
   });
   
-  
-  //Marquee Class
-  $('.colophon .flexslider li').each(function(index){
-    console.log( index + ":" + $(this).text() );
-    
-    var titleWidth = $(this).width();
-    
-    console.log( index + ":" + titleWidth );
-    
-    if(titleWidth > 150) {
-      $(this).children('h4').addClass('scroll');
-    }
-    
-  });
-  
-  
-  
-  
   jQuery.fn.log = function (msg) {
       console.log("%s: %o", msg, this);
       return this;

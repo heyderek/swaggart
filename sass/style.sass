@@ -560,13 +560,17 @@ h1,h3,h5
         &>
           margin: 0 10px
         h4
+          margin: 0
+          text-shadow: 0 -1px 3px $white
+          white-space: nowrap
+          max-width: $cols5 - 2em
+          text-overflow: ellipsis
+          overflow: hidden
+        .ns-border-wrap
           border:
             top: 2px dotted $white
             bottom: 2px dotted $white
-          margin: 0
           padding: 10px 20px
-          text-shadow: 0 -1px 3px $white
-          white-space: nowrap
         .button
           padding: 0 20px
           border: 2px solid $md_green

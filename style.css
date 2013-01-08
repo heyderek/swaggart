@@ -906,12 +906,16 @@ h1, h3, h5 {
       .colophon .flexslider .slides li > {
         margin: 0 10px; }
       .colophon .flexslider .slides li h4 {
+        margin: 0;
+        text-shadow: 0 -1px 3px white;
+        white-space: nowrap;
+        max-width: 21.75em;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      .colophon .flexslider .slides li .ns-border-wrap {
         border-top: 2px dotted white;
         border-bottom: 2px dotted white;
-        margin: 0;
-        padding: 10px 20px;
-        text-shadow: 0 -1px 3px white;
-        white-space: nowrap; }
+        padding: 10px 20px; }
       .colophon .flexslider .slides li .button {
         padding: 0 20px;
         border: 2px solid #588f27; }
