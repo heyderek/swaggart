@@ -624,6 +624,10 @@ h1, h3, h5 {
   max-width: 100%;
   height: auto; }
 
+.alignnone {
+  max-width: 100%;
+  height: auto; }
+
 .alignleft {
   float: left;
   margin: 0 10px 20px 0; }
