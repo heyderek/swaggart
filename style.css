@@ -1017,7 +1017,9 @@ h1, h3, h5 {
     width: 13.75em; }
 
   .colophon .flexslider {
-    width: 23.75em; } }
+    width: 23.75em; }
+    .colophon .flexslider .slides li h4 {
+      width: 8.75em; } }
 @media screen and (min-width: 540px) and (max-width: 959px) {
   .wrapper {
     width: 38.75em; }
@@ -1063,7 +1065,9 @@ h1, h3, h5 {
     display: none; }
 
   .colophon .flexslider {
-    width: 23.75em; } }
+    width: 23.75em; }
+    .colophon .flexslider .slides li h4 {
+      width: 8.75em; } }
 @media screen and (min-width: 0px) and (max-width: 539px) {
   .wrapper {
     width: 18.75em; }
@@ -1104,6 +1108,8 @@ h1, h3, h5 {
 
   .colophon .flexslider {
     width: 100%; }
+    .colophon .flexslider .slides li h4 {
+      width: 3.75em; }
 
   .colophon .wrapper .footer-nav-container {
     margin: 20px auto;

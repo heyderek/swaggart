@@ -681,8 +681,11 @@ h1,h3,h5
     .secondary
       width: $cols3
   //Footer
-  .colophon .flexslider
-    width: $cols5
+  .colophon 
+    .flexslider
+      width: $cols5
+      .slides li h4
+        width: $cols2
 
 @media screen and (min-width: 540px) and (max-width: 959px)
   //General
@@ -735,6 +738,8 @@ h1,h3,h5
   //Footer
   .colophon .flexslider
     width: $cols5
+    .slides li h4
+      width: $cols2
 
 @media screen and (min-width: 0px) and (max-width: 539px)
 
@@ -783,6 +788,8 @@ h1,h3,h5
   //Footer
   .colophon .flexslider
     width: 100%
+    .slides li h4
+      width: $cols1
   .colophon
     .wrapper
       .footer-nav-container
