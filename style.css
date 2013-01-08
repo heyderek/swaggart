@@ -620,7 +620,9 @@ h1, h3, h5 {
       top: 8.75em; }
 
 .alignleft, .alignright, .aligncenter {
-  box-shadow: 1px 1px 3px #666666; }
+  box-shadow: 1px 1px 3px #666666;
+  max-width: 100%;
+  height: auto; }
 
 .alignleft {
   float: left;
@@ -1020,28 +1022,10 @@ h1, h3, h5 {
 
   .featured-content {
     position: relative; }
+    .featured-content .flexslider .flex-direction-nav {
+      display: none; }
     .featured-content .flexslider .caption {
-      width: 18.75em; }
-      .featured-content .flexslider .caption h3 {
-        font-size: 42px; }
-      .featured-content .flexslider .caption .big-button {
-        padding: 10px;
-        font-size: 18px; }
-        .featured-content .flexslider .caption .big-button:after {
-          border-width: 42px;
-          right: -84px; }
-        .featured-content .flexslider .caption .big-button span {
-          font-size: 28px; }
-    .featured-content .flexslider .left {
-      left: 3.75em; }
-    .featured-content .flexslider .right {
-      right: 3.75em; }
-    .featured-content .flexslider .bottom {
-      bottom: 3.75em; }
-    .featured-content .flexslider .top {
-      top: 3.75em; }
-    .featured-content .flexslider .blktnt {
-      padding: 10px; }
+      display: none !important; }
 
   .content h1, .content h3, .content h5 {
     font-size: 38px; }

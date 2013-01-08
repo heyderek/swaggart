@@ -264,6 +264,8 @@ h1,h3,h5
 
 .alignleft, .alignright, .aligncenter
   box-shadow: 1px 1px 3px $sixes
+  max-width: 100%
+  height: auto
 
 .alignleft
   float: left
@@ -688,28 +690,10 @@ h1,h3,h5
   .featured-content
     position: relative
     .flexslider
+      .flex-direction-nav
+        display: none
       .caption
-        width: $cols4
-        h3
-          font-size: 42px
-        .big-button
-          padding: 10px
-          font-size: 18px
-          &:after
-            border-width: 42px
-            right: -84px
-          span
-            font-size: 28px
-      .left
-        left: $cols1
-      .right
-        right: $cols1
-      .bottom
-        bottom: $cols1
-      .top
-        top: $cols1
-      .blktnt
-        padding: 10px
+        display: none !important
   //Content
   .content
     h1,h3,h5
