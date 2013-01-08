@@ -29,6 +29,7 @@
           <?php wp_footer(); ?>
         </footer><!-- /.wrapper -->
       </section><!-- /.colophon -->
+        <div class="scroll">Lollipop topping lemon drops jujubes applicake fruitcake tart liquorice sesame snaps.</div>
     </div><!-- /.page -->
   </body>
 </html>
