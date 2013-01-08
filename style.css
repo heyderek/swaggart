@@ -1059,4 +1059,15 @@ h1, h3, h5 {
       font-size: 25px; }
 
   .colophon .flexslider {
-    width: 100%; } }
+    width: 100%; }
+
+  .colophon .wrapper .footer-nav-container {
+    margin: 20px auto;
+    display: block; }
+  .colophon .wrapper .social {
+    text-align: center;
+    margin: 20px auto;
+    display: block; }
+  .colophon .wrapper h3 {
+    display: block;
+    text-align: center; } }
