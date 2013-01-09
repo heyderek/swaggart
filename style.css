@@ -1053,16 +1053,18 @@ h1, h3, h5 {
           right: -84px; }
         .featured-content .flexslider .caption .big-button span {
           font-size: 28px; }
-    .featured-content .flexslider .left {
-      left: 3.75em; }
-    .featured-content .flexslider .right {
-      right: 3.75em; }
-    .featured-content .flexslider .bottom {
-      bottom: 3.75em; }
-    .featured-content .flexslider .top {
-      top: 3.75em; }
-    .featured-content .flexslider .blktnt {
-      padding: 10px; }
+    .featured-content .flex-direction-nav {
+      display: none; }
+      .featured-content .flex-direction-nav .left {
+        left: 3.75em; }
+      .featured-content .flex-direction-nav .right {
+        right: 3.75em; }
+      .featured-content .flex-direction-nav .bottom {
+        bottom: 3.75em; }
+      .featured-content .flex-direction-nav .top {
+        top: 3.75em; }
+      .featured-content .flex-direction-nav .blktnt {
+        padding: 10px; }
 
   .content h1, .content h3, .content h5 {
     font-size: 38px; }
@@ -1076,10 +1078,7 @@ h1, h3, h5 {
   .colophon .flexslider {
     width: 23.75em; }
     .colophon .flexslider .slides li h4 {
-      width: 8.75em; }
-
-  .flex-direction-nav {
-    display: none; } }
+      width: 8.75em; } }
 @media screen and (min-width: 0px) and (max-width: 539px) {
   .wrapper {
     width: 18.75em; }
