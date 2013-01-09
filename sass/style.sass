@@ -696,9 +696,18 @@ h1,h3,h5
     .branding 
       .logo
         width: $cols3 - 2em
-    .menu ul li a
-      font-size: 14px
-      padding: 40px 10px 10px
+        position: relative
+        margin-bottom: -4em
+    .menu ul 
+      display: none
+    #access
+      text-align: right
+      select
+        display: block
+        right: 0
+        top: 30px
+        width: 25em
+        position: absolute
   //Front-page
   .featured-content
     position: relative
@@ -740,6 +749,8 @@ h1,h3,h5
     width: $cols5
     .slides li h4
       width: $cols2
+  .flex-direction-nav
+    display: none
 
 @media screen and (min-width: 0px) and (max-width: 539px)
 
@@ -760,7 +771,7 @@ h1,h3,h5
         font-size: 16px
       select
         display: block
-        margin: 0 auto
+        margin: 20px auto
   //Front-page
   .featured-content
     position: relative

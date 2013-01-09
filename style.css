@@ -1025,10 +1025,19 @@ h1, h3, h5 {
     width: 38.75em; }
 
   .masthead .branding .logo {
-    width: 11.75em; }
-  .masthead .menu ul li a {
-    font-size: 14px;
-    padding: 40px 10px 10px; }
+    width: 11.75em;
+    position: relative;
+    margin-bottom: -4em; }
+  .masthead .menu ul {
+    display: none; }
+  .masthead #access {
+    text-align: right; }
+    .masthead #access select {
+      display: block;
+      right: 0;
+      top: 30px;
+      width: 25em;
+      position: absolute; }
 
   .featured-content {
     position: relative; }
@@ -1067,7 +1076,10 @@ h1, h3, h5 {
   .colophon .flexslider {
     width: 23.75em; }
     .colophon .flexslider .slides li h4 {
-      width: 8.75em; } }
+      width: 8.75em; }
+
+  .flex-direction-nav {
+    display: none; } }
 @media screen and (min-width: 0px) and (max-width: 539px) {
   .wrapper {
     width: 18.75em; }
@@ -1082,7 +1094,7 @@ h1, h3, h5 {
     font-size: 16px; }
   .masthead .menu select {
     display: block;
-    margin: 0 auto; }
+    margin: 20px auto; }
 
   .featured-content {
     position: relative; }
