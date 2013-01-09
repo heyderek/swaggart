@@ -1082,7 +1082,8 @@ h1, h3, h5 {
     font-size: 16px; }
   .masthead .menu select {
     display: block;
-    margin: 40px auto; }
+    margin: 0 auto;
+    padding: 40px 0; }
 
   .featured-content {
     position: relative; }
@@ -1109,7 +1110,9 @@ h1, h3, h5 {
   .colophon .flexslider {
     width: 100%; }
     .colophon .flexslider .slides li h4 {
-      width: 3.75em; }
+      width: 13.75em; }
+    .colophon .flexslider .slides li span {
+      display: none; }
 
   .colophon .wrapper .footer-nav-container {
     margin: 20px auto;

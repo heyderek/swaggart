@@ -760,7 +760,8 @@ h1,h3,h5
         font-size: 16px
       select
         display: block
-        margin: 40px auto
+        margin: 0 auto
+        padding: 40px 0
   //Front-page
   .featured-content
     position: relative
@@ -788,8 +789,11 @@ h1,h3,h5
   //Footer
   .colophon .flexslider
     width: 100%
-    .slides li h4
-      width: $cols1
+    .slides li
+      h4
+        width: $cols3
+      span
+        display: none
   .colophon
     .wrapper
       .footer-nav-container
