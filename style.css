@@ -1082,8 +1082,7 @@ h1, h3, h5 {
     font-size: 16px; }
   .masthead .menu select {
     display: block;
-    margin: 0 auto;
-    padding: 40px 0; }
+    margin: 0 auto; }
 
   .featured-content {
     position: relative; }
