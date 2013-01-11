@@ -473,6 +473,8 @@ h1, h3, h5 {
       display: inline-block;
       vertical-align: top;
       text-align: center; }
+      .masthead .menu ul li ul {
+        display: none; }
       .masthead .menu ul li a, .masthead .menu ul li span {
         padding: 40px 20px 20px; }
         .masthead .menu ul li a:hover, .masthead .menu ul li span:hover {
