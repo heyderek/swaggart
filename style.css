@@ -1053,18 +1053,18 @@ h1, h3, h5 {
           right: -84px; }
         .featured-content .flexslider .caption .big-button span {
           font-size: 28px; }
+    .featured-content .flexslider .left {
+      left: 5%; }
+    .featured-content .flexslider .right {
+      right: 5%; }
+    .featured-content .flexslider .bottom {
+      bottom: 15%; }
+    .featured-content .flexslider .top {
+      top: 14%; }
+    .featured-content .flexslider .blktnt {
+      padding: 10px; }
     .featured-content .flex-direction-nav {
       display: none; }
-      .featured-content .flex-direction-nav .left {
-        left: 3.75em; }
-      .featured-content .flex-direction-nav .right {
-        right: 3.75em; }
-      .featured-content .flex-direction-nav .bottom {
-        bottom: 3.75em; }
-      .featured-content .flex-direction-nav .top {
-        top: 3.75em; }
-      .featured-content .flex-direction-nav .blktnt {
-        padding: 10px; }
 
   .content h1, .content h3, .content h5 {
     font-size: 38px; }
