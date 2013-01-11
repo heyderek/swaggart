@@ -696,6 +696,7 @@ h1, h3, h5 {
     border: none; }
 
 .cover {
+  background: url(images/blacktnt.png);
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 10;
