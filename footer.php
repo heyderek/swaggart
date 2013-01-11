@@ -18,10 +18,10 @@
           </div><!-- /.flexslider -->
           <div class="footer-nav-container"></div><!-- /.footer-nav-container -->
           <ul class="social">
-            <li><a href="http://www.linkedin.com/company/2683901?trk=tyah" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/linked_in.png" /></a></li>
-            <li><a href="https://twitter.com/SwaggartBros" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/pages/Swaggart-Brothers-Inc/445260195519020?ref=ts&fref=ts" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png" /></a></li>
-            <li><a href="http://swaggart.versatilehosting.com/contact-us/"><img src="<?php bloginfo('template_url'); ?>/images/email.png" /></a></li>
+            <li><a href="http://www.linkedin.com/company/2683901?trk=tyah" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/linked_in.png" alt="Swaggart on LinkedIn icon" /></a></li>
+            <li><a href="https://twitter.com/SwaggartBros" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png" alt="Swaggart on Twitter icon" /></a></li>
+            <li><a href="https://www.facebook.com/pages/Swaggart-Brothers-Inc/445260195519020?ref=ts&fref=ts" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png" alt="Swaggart on Facebook icon" /></a></li>
+            <li><a href="http://swaggart.versatilehosting.com/contact-us/"><img src="<?php bloginfo('template_url'); ?>/images/email.png" alt="Conact Swaggart icon" /></a></li>
           </ul><!-- /.social -->
           <footer class="credits">
             <p>&copy; 2012 Swaggart Brothers. Inc.</p>
