@@ -344,12 +344,7 @@ h1,h3,h5
   left: 0
   top: 0
   transition: all .3s linear
-  
 
-.gallery
-  img
-    height: auto
-    width: 100%
 .page-content
   background: url(images/bg_tile.png) $white
   position: relative
@@ -430,6 +425,27 @@ h1,h3,h5
   color: $white
   text-transform: uppercase
   @include open_sans_condensedbold
+
+//Gallery Styles
+
+.gallery
+  img
+    height: auto
+    width: 100%
+    margin: auto
+.gallery-item 
+  float: left
+  margin-top: 10px
+  margin-right: 20px
+  text-align: center
+  width: 30%
+  img 
+    border: 5px solid #fff
+    box-shadow: 1px 1px 3px #999
+    border-radius: 8px
+
+.gallery-caption 
+  margin-left: 0
 
 //Sidebar
 
@@ -746,6 +762,8 @@ h1,h3,h5
       min-height: $cols7
     .secondary
       display: none
+  .gallery-item
+    width: 45%
   //Footer
   .colophon .flexslider
     width: $cols5
@@ -796,6 +814,8 @@ h1,h3,h5
       width: 5px
     h3
       font-size: 25px
+  .gallery-item
+    width: 95%
   //Footer
   .colophon .flexslider
     width: 100%

@@ -58,25 +58,6 @@ function my_post_gallery( $output, $attr) {
     $selector = "gallery-{$instance}";
 
     $output = apply_filters('gallery_style', "
-        <style type='text/css'>
-            #{$selector} {
-                margin: auto;
-            }
-            #{$selector} .gallery-item {
-                float: {$float};
-                margin-top: 10px;
-                margin-right: 20px;
-                text-align: center;
-                width: 30%;           }
-            #{$selector} img {
-                border: 5px solid #fff;
-                box-shadow: 1px 1px 3px #999;
-                border-radius: 8px;
-            }
-            #{$selector} .gallery-caption {
-                margin-left: 0;
-            }
-        </style>
         <!-- see gallery_shortcode() in wp-includes/media.php -->
         <div id='$selector' class='gallery galleryid-{$id}'>");
 
