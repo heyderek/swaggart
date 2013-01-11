@@ -35,7 +35,7 @@
             <h1><?php bloginfo('name'); ?></h1>
             <h2><?php bloginfo('description'); ?></h2>
           </hgroup><!-- /.branding -->
-          <a href="<?php echo home_url('/'); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a>
+          <a href="<?php echo home_url('/'); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Swaggart Brothers Logo" /></a>
           <?php wp_nav_menu(array('theme_location' => 'primary', 'container_id' => 'access', 'walker' => new Menu_With_Description)); ?>
         </header><!-- /.wrapper -->
       </section><!-- /.masthead -->

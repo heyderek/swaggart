@@ -1,6 +1,6 @@
       <section class="colophon">
         <footer class="wrapper">
-          <h3><img src="<?php bloginfo('template_url'); ?>/images/news_icon.png" />News</h3>
+          <h3><img src="<?php bloginfo('template_url'); ?>/images/news_icon.png" alt="Swaggart Brothers News Icon" />News</h3>
           <div class="flexslider">
             <ul class="slides">
             
