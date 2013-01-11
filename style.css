@@ -445,13 +445,13 @@ h1, h3, h5 {
   .masthead .branding h1, .masthead .branding h2 {
     position: absolute;
     text-indent: -9999em; }
-  .masthead .branding .logo {
+  .masthead .logo {
     width: 18.75em;
     display: block;
     padding: 10px;
     position: absolute;
     z-index: 11; }
-    .masthead .branding .logo img {
+    .masthead .logo img {
       max-width: 100%;
       height: auto; }
   .masthead #menu-main-menu li > img {
@@ -996,7 +996,7 @@ h1, h3, h5 {
   .wrapper {
     width: 58.75em; }
 
-  .masthead .branding .logo {
+  .masthead .logo {
     width: 13.75em; }
   .masthead .menu a {
     font-size: 16px; }
@@ -1043,7 +1043,7 @@ h1, h3, h5 {
   .wrapper {
     width: 38.75em; }
 
-  .masthead .branding .logo {
+  .masthead .logo {
     width: 11.75em;
     position: relative;
     margin-bottom: -4em; }
@@ -1105,7 +1105,7 @@ h1, h3, h5 {
   .wrapper {
     width: 18.75em; }
 
-  .masthead .branding .logo {
+  .masthead .logo {
     width: 13.75em;
     position: relative;
     margin: 0 auto; }
