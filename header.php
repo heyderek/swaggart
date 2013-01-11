@@ -3,6 +3,8 @@
 <meta name="viewport" content="width=device-width" />
 <html>
   <head>
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/bookmark-icon.png" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" title="stylesheet" type="text/css" media="screen" charset="utf-8">
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.js" charset="utf-8"></script>
     <!--[if lt IE 9]><script src="<?php bloginfo('template_url'); ?>/js/html5.js" charset="utf-8"></script><![endif]-->
