@@ -1,103 +1,1158 @@
-/*
-Syntax error: Undefined variable: "$blkbyu".
-        on line 248 of sass/style.sass
+/*Theme Name: Swaggart Brothers Theme
+ *Theme URI: http://swaggartbrothers.com
+ *Description: A clean, semantic, HTML5 theme that utilizes CSS3.
+ *Author: Derek Nelson
+ *Author URI: http://dereknelson.net
+ *Version: 1.0
+ *Tags: html5, css3, blog, microformats
+ *
+ *License: GPL
+ *License URI: license.txt */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-243:       h1, h3, h5
-244:         text-shadow: 2px 2px 0 $drk_green
-245:         white-space: normal
-246:         color: $white
-247:     .blktnt
-248:       background: $blkbyu
-249:       background: $blktnt
-250:       color: $white
-251:       padding: $gutter
-252:       h1, h3, h5
-253:         text-shadow: 2px 2px 0 $drk_green
+body {
+  line-height: 1; }
 
-Backtrace:
-sass/style.sass:248
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/script/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:216:in `visit_prop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/engine.rb:300:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/engine.rb:247:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:340:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:298:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:95:in `initialize_adapter'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `initialize'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `new'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:44:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:306:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ffff99;
+  color: black;
+  text-decoration: none; }
+
+mark {
+  background-color: #ffff99;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*	Frameless			<http://framelessgrid.com/>
+ *	by Joni Korpi 		<http://jonikorpi.com/>
+ *	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/> */
+/*	Margin, padding, and border resets
+ *	except for form elements */
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/*	Consistency fixes
+ *	adopted from http://necolas.github.com/normalize.css/ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block; }
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  min-height: 100%;
+  font-size: 100%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre {
   white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$blkbyu\".\A         on line 248 of sass/style.sass\A \A 243:       h1, h3, h5\A 244:         text-shadow: 2px 2px 0 $drk_green\A 245:         white-space: normal\A 246:         color: $white\A 247:     .blktnt\A 248:       background: $blkbyu\A 249:       background: $blktnt\A 250:       color: $white\A 251:       padding: $gutter\A 252:       h1, h3, h5\A 253:         text-shadow: 2px 2px 0 $drk_green"; }
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+b, strong {
+  font-weight: bold; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img, img {
+  -ms-interpolation-mode: bicubic;
+  border: 0; }
+
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+textarea {
+  overflow: auto; }
+
+/*	These are easy to forget */
+::selection {
+  background: red;
+  color: white; }
+
+::-moz-selection {
+  background: red;
+  color: white; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62); }
+
+/*	Style overrides for IE6-8
+ *	http://jonikorpi.com/leaving-old-IE-behind/ */
+/*	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+ *	Just change the media queries to activate them.
+ *	Assuming your base font-size is 16:
+ *	- the first one zooms out by a factor of (16-2)/16 = 0.875
+ *	- the second one zooms in by a factor of (16+2)/16 = 1.125 */
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em; } }
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em; } }
+/* jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin) */
+/* Browser Resets */
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+  outline: none; }
+
+.slides, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* FlexSlider Necessary Styles
+ ********************************* */
+.flexslider {
+  margin: 0;
+  padding: 0; }
+  .flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden; }
+  .flexslider .slides img {
+    width: 100%;
+    display: block; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span {
+  text-transform: capitalize; }
+
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+html[xmlns] .slides {
+  display: block; }
+
+* .slides {
+  height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js li:first-child {
+  display: block; }
+
+/* FlexSlider Default Theme
+ ********************************* */
+.flexslider {
+  margin: 0 0 60px;
+  background: white;
+  border: 4px solid white;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1; }
+
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.loading .flex-viewport {
+  max-height: 300px; }
+
+.flexslider .slides {
+  zoom: 1; }
+
+.carousel li {
+  margin-right: 5px; }
+
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0; }
+  .flex-direction-nav a {
+    width: 30px;
+    height: 30px;
+    margin: -20px 0 0;
+    display: block;
+    background: url(images/bg_direction_nav.png) no-repeat 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    text-indent: -9999px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease; }
+  .flex-direction-nav .flex-next {
+    background-position: 100% 0;
+    right: -36px; }
+  .flex-direction-nav .flex-prev {
+    left: -36px; }
+
+.flexslider:hover .flex-next {
+  opacity: 0.8;
+  right: 5px; }
+.flexslider:hover .flex-prev {
+  opacity: 0.8;
+  left: 5px; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1; }
+
+.flex-direction-nav .flex-disabled {
+  opacity: 0.3 !important;
+  filter: alpha(opacity=30);
+  cursor: default; }
+
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center; }
+  .flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+
+.flex-control-paging a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
+  .flex-control-paging a:hover {
+    background: #333333;
+    background: rgba(0, 0, 0, 0.7); }
+  .flex-control-paging a.flex-active {
+    background: black;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: default; }
+
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden; }
+  .flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0; }
+  .flex-control-thumbs img {
+    width: 100%;
+    display: block;
+    opacity: 0.7;
+    cursor: pointer; }
+    .flex-control-thumbs img:hover {
+      opacity: 1; }
+  .flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default; }
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 0; }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 0; } }
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on December 4, 2012 */
+@font-face {
+  font-family: "open_sans_condensedbold";
+  src: url("fonts/opensans-condbold-webfont.eot");
+  src: url("fonts/opensans-condbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-condbold-webfont.woff") format("woff"), url("fonts/opensans-condbold-webfont.ttf") format("truetype"), url("fonts/opensans-condbold-webfont.svg#open_sans_condensedbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("fonts/opensans-regular-webfont.eot");
+  src: url("fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-regular-webfont.woff") format("woff"), url("fonts/opensans-regular-webfont.ttf") format("truetype"), url("fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "open_sansitalic";
+  src: url("fonts/opensans-italic-webfont.eot");
+  src: url("fonts/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-italic-webfont.woff") format("woff"), url("fonts/opensans-italic-webfont.ttf") format("truetype"), url("fonts/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "open_sansbold";
+  src: url("fonts/opensans-bold-webfont.eot");
+  src: url("fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-bold-webfont.woff") format("woff"), url("fonts/opensans-bold-webfont.ttf") format("truetype"), url("fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  overflow-x: hidden; }
+
+body {
+  background: #588f27;
+  font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #588f27;
+  transition: all 0.3s linear; }
+  a:hover {
+    color: #003300; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0 0 20px 0; }
+
+h1, h3, h5 {
+  font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.wrapper {
+  width: 78.75em;
+  margin: 0 auto;
+  position: relative; }
+
+.button {
+  background: #a9cf54;
+  color: white;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s linear; }
+  .button:hover {
+    background: #588f27; }
+
+.masthead {
+  background: #a9cf54;
+  border-bottom: 10px solid #588f27; }
+  .masthead .branding h1, .masthead .branding h2 {
+    position: absolute;
+    text-indent: -9999em; }
+  .masthead .branding .logo {
+    width: 18.75em;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    z-index: 11; }
+    .masthead .branding .logo img {
+      max-width: 100%;
+      height: auto; }
+  .masthead #menu-main-menu li > img {
+    display: none; }
+  .masthead .menu a, .masthead .menu span {
+    padding: 20px;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px; }
+    .masthead .menu a:hover, .masthead .menu span:hover {
+      background: #8bb745;
+      color: #e1e6b9; }
+  .masthead .menu select {
+    display: none; }
+  .masthead .menu ul {
+    text-align: right; }
+    .masthead .menu ul li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center; }
+      .masthead .menu ul li a, .masthead .menu ul li span {
+        padding: 40px 20px 20px; }
+        .masthead .menu ul li a:hover, .masthead .menu ul li span:hover {
+          cursor: pointer; }
+      .masthead .menu ul li .menu-overlay {
+        position: absolute;
+        padding: 20px;
+        top: 100%;
+        z-index: 12;
+        display: none;
+        right: 0;
+        width: 65%;
+        text-align: left; }
+        .masthead .menu ul li .menu-overlay .nav-thumb, .masthead .menu ul li .menu-overlay ul {
+          display: inline-block;
+          vertical-align: top;
+          box-sizing: border-box; }
+        .masthead .menu ul li .menu-overlay ul {
+          padding: 0 0 0 20px; }
+          .masthead .menu ul li .menu-overlay ul li {
+            display: block;
+            position: relative; }
+            .masthead .menu ul li .menu-overlay ul li ul {
+              display: none; }
+            .masthead .menu ul li .menu-overlay ul li:hover ul {
+              display: block;
+              position: absolute;
+              z-index: 9;
+              background: rgba(0, 0, 0, 0.75);
+              padding-top: 10px;
+              top: 0;
+              left: 100%;
+              border-left: 1px solid white; }
+              .masthead .menu ul li .menu-overlay ul li:hover ul li {
+                white-space: nowrap; }
+          .masthead .menu ul li .menu-overlay ul a {
+            text-align: left;
+            padding: 0 10px 20px 0; }
+            .masthead .menu ul li .menu-overlay ul a:hover {
+              color: #a9cf54;
+              text-shadow: 0 -1px 3px #a9cf54;
+              background: none; }
+        .masthead .menu ul li .menu-overlay h4 {
+          font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+          .masthead .menu ul li .menu-overlay h4 a {
+            color: white;
+            font-size: 42px;
+            text-transform: uppercase;
+            cursor: cursor;
+            padding: 0; }
+            .masthead .menu ul li .menu-overlay h4 a:hover {
+              background: none; }
+        .masthead .menu ul li .menu-overlay img {
+          border: 5px solid white; }
+        .masthead .menu ul li .menu-overlay .close {
+          margin: 20px 0;
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+
+.featured-content {
+  position: relative; }
+  .featured-content .flexslider {
+    background: #588f27;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0; }
+    .featured-content .flexslider img {
+      height: auto; }
+    .featured-content .flexslider .flex-viewport:after {
+      width: 100%;
+      background: url(images/main_slider_overlay.png) center bottom repeat-x;
+      background-size: 100%;
+      content: "";
+      width: 100%;
+      height: 15%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0; }
+    .featured-content .flexslider .slides li {
+      position: relative; }
+    .featured-content .flexslider .flex-direction-nav a {
+      width: 100px;
+      height: 100px; }
+    .featured-content .flexslider .flex-direction-nav .flex-next {
+      background: url(images/arrow_right.png) center center;
+      right: 0; }
+    .featured-content .flexslider .flex-direction-nav .flex-prev {
+      background: url(images/arrow_left.png) center center;
+      left: 0; }
+    .featured-content .flexslider .caption {
+      position: absolute;
+      width: 28.75em;
+      color: #003300; }
+      .featured-content .flexslider .caption h3 {
+        font-size: 62px;
+        text-shadow: 2px 2px 0 white;
+        white-space: nowrap; }
+      .featured-content .flexslider .caption .big-button {
+        background: #588f27;
+        padding: 20px;
+        display: block;
+        color: white;
+        text-align: right;
+        position: relative;
+        width: 10.75em;
+        font-size: 24px;
+        line-height: 1.35;
+        z-index: 9; }
+        .featured-content .flexslider .caption .big-button:after {
+          content: "";
+          border-color: transparent transparent transparent #588f27;
+          border-style: solid;
+          border-width: 62px;
+          display: block;
+          position: absolute;
+          right: -124px;
+          top: 0; }
+        .featured-content .flexslider .caption .big-button span {
+          text-transform: uppercase;
+          font-size: 38px;
+          display: block;
+          font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .featured-content .flexslider .white {
+      color: white; }
+      .featured-content .flexslider .white h1, .featured-content .flexslider .white h3, .featured-content .flexslider .white h5 {
+        text-shadow: 2px 2px 0 #003300;
+        white-space: normal;
+        color: white; }
+    .featured-content .flexslider .blktnt {
+      background: url(images/blacktnt.png);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 20px; }
+      .featured-content .flexslider .blktnt h1, .featured-content .flexslider .blktnt h3, .featured-content .flexslider .blktnt h5 {
+        text-shadow: 2px 2px 0 #003300;
+        white-space: normal;
+        color: white; }
+    .featured-content .flexslider .left {
+      left: 8.75em; }
+    .featured-content .flexslider .right {
+      right: 8.75em; }
+    .featured-content .flexslider .bottom {
+      bottom: 8.75em; }
+    .featured-content .flexslider .top {
+      top: 8.75em; }
+
+.alignleft, .alignright, .aligncenter {
+  box-shadow: 1px 1px 3px #666666;
+  max-width: 100%;
+  height: auto; }
+
+.alignnone {
+  max-width: 100%;
+  height: auto; }
+
+.alignleft {
+  float: left;
+  margin: 0 10px 20px 0; }
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 10px; }
+
+.aligncenter {
+  margin: 0 auto;
+  display: inline-block; }
+
+.clear {
+  clear: both; }
+
+.wp-caption {
+  background: white;
+  padding: 10px; }
+  .wp-caption img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px; }
+  .wp-caption .wp-caption-text {
+    text-align: center;
+    margin: 0;
+    font-size: 14px; }
+
+.content {
+  color: #666666; }
+  .content h1, .content h3, .content h5 {
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #003300; }
+  .content h2, .content h4, .content h6 {
+    font-size: 20px;
+    color: #333333; }
+  .content .cat-heading {
+    font-size: 24px;
+    font-family: "open_sansbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .content blockquote {
+    margin: 0 0 20px;
+    background: #dddddd;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cccccc; }
+    .content blockquote p {
+      margin: 0; }
+  .content p {
+    margin: 0 0 20px 0;
+    line-height: 1.35; }
+  .content ul, .content ol {
+    margin: 0 0 20px 10px;
+    padding: 0 0 0 10px;
+    line-height: 1.35; }
+  .content ul {
+    list-style: disc outside; }
+  .content ol {
+    list-style: decimal outside; }
+
+.posts {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 2px dotted #cccccc; }
+  .posts:last-child {
+    border: none; }
+
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s linear; }
+
+.page-content {
+  background: url(images/bg_tile.png) white;
+  position: relative; }
+  .page-content .headerimg {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .page-content .headerimg:after {
+      width: 100%;
+      background: url(images/main_slider_overlay.png) center bottom repeat-x;
+      background-size: 100%;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0; }
+    .page-content .headerimg img {
+      width: 100%;
+      z-index: 0;
+      height: auto;
+      position: relative; }
+  .page-content .primary, .page-content .secondary {
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    vertical-align: top;
+    background: white;
+    padding: 20px;
+    border-top: none;
+    border-right: 5px solid #cccccc;
+    border-bottom: none;
+    border-left: 5px solid #cccccc; }
+    .page-content .primary > *, .page-content .secondary > * {
+      white-space: normal; }
+  .page-content .primary {
+    width: 58.75em;
+    min-height: 33.75em; }
+  .page-content .secondary {
+    width: 18.75em;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #cccccc;
+    border-right: none;
+    margin-right: -5px; }
+
+.cat-thumbs {
+  position: relative;
+  margin: 0 0 20px;
+  border: 10px solid #a9cf54;
+  font-size: 0; }
+  .cat-thumbs h3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    text-shadow: 2px 2px 0 #003300;
+    white-space: normal;
+    color: white; }
+  .cat-thumbs img {
+    width: 100%;
+    height: auto; }
+
+.grid {
+  list-style: none; }
+  .grid li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width: 18.75em; }
+    .grid li img {
+      width: 100%;
+      height: auto; }
+
+.location-caption {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "open_sans_condensedbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.gallery img {
+  height: auto;
+  width: 100%;
+  margin: auto; }
+
+.gallery-item {
+  float: left;
+  margin-top: 10px;
+  margin-right: 20px;
+  text-align: center;
+  width: 30%; }
+  .gallery-item img {
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px #999999;
+    border-radius: 8px; }
+
+.gallery-caption {
+  margin-left: 0; }
+
+.secondary .content .ribbon {
+  background: #719d51;
+  font-size: 42px;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  margin-left: -35px;
+  border-width: 0 0 0 10px;
+  border-style: solid;
+  border-padding: 10px 0 0;
+  border-color: transparent transparent transparent #4e8826; }
+  .secondary .content .ribbon:before {
+    content: "";
+    left: -10px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-width: 10px 0 0 10px;
+    border-style: solid;
+    border-color: #719d51 transparent transparent transparent; }
+  .secondary .content .ribbon:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+    display: block;
+    border-width: 10px 0 0 10px;
+    border-style: solid;
+    border-color: #4e8826 transparent transparent transparent; }
+.secondary .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0; }
+  .secondary .menu li a {
+    padding: 10px;
+    color: #333333;
+    display: block;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #cccccc transparent transparent transparent; }
+    .secondary .menu li a:hover {
+      background: #a9cf54;
+      color: #003300; }
+  .secondary .menu li ul {
+    list-style: none;
+    margin: 0; }
+
+.colophon {
+  background: url(images/mountains_trees.png) center bottom no-repeat, url(images/mountains_hills.png) left bottom repeat-x #a9cf54;
+  color: white; }
+  .colophon .wrapper {
+    padding: 40px 0; }
+    .colophon .wrapper h3, .colophon .wrapper .flexslider, .colophon .wrapper .social, .colophon .wrapper .footer-nav-container, .colophon .wrapper img {
+      display: inline-block;
+      vertical-align: middle; }
+    .colophon .wrapper h3 {
+      margin: 0 10px;
+      font-size: 22px; }
+      .colophon .wrapper h3 img {
+        width: 2.143em;
+        margin: 0 10px; }
+  .colophon .flexslider {
+    width: 33.75em;
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    position: relative;
+    overflow-y: hidden;
+    border-radius: 0; }
+    .colophon .flexslider .frame {
+      position: absolute;
+      z-index: 3;
+      padding: 20px 0;
+      width: 100%;
+      height: 100%;
+      top: -10px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.75); }
+    .colophon .flexslider .flex-viewport {
+      overflow-y: visible;
+      padding: 10px 0; }
+      .colophon .flexslider .flex-viewport:before {
+        background: -webkit-radial-gradient(left, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(ellipse at left center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
+        width: 25px;
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 0;
+        padding: 2px;
+        height: 100%;
+        z-index: 3; }
+      .colophon .flexslider .flex-viewport:after {
+        background: -webkit-radial-gradient(right, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%);
+        background: radial-gradient(ellipse at right center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 75%);
+        width: 25px;
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: 0;
+        padding: 2px;
+        height: 100%; }
+    .colophon .flexslider .slides li {
+      background: #e1e6b9;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+      color: #588f27;
+      position: relative;
+      z-index: 0;
+      padding: 10px 0;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white; }
+      .colophon .flexslider .slides li > {
+        margin: 0 10px; }
+      .colophon .flexslider .slides li h4 {
+        margin: 0;
+        text-shadow: 0 -1px 3px white;
+        white-space: nowrap;
+        max-width: 21.75em;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      .colophon .flexslider .slides li .ns-border-wrap {
+        border-top: 2px dotted white;
+        border-bottom: 2px dotted white;
+        padding: 10px 20px; }
+      .colophon .flexslider .slides li .button {
+        padding: 0 20px;
+        border: 2px solid #588f27; }
+        .colophon .flexslider .slides li .button:hover {
+          color: white; }
+      .colophon .flexslider .slides li span {
+        position: absolute;
+        right: 20px;
+        top: 37%;
+        z-index: 3; }
+  .colophon .footer-nav-container {
+    position: relative;
+    width: 6.75em;
+    padding: 0 20px; }
+    .colophon .footer-nav-container .flex-direction-nav {
+      position: relative;
+      text-align: center; }
+      .colophon .footer-nav-container .flex-direction-nav li {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-size: 0; }
+      .colophon .footer-nav-container .flex-direction-nav a {
+        width: 50px;
+        position: relative;
+        margin: 0;
+        opacity: 0.65;
+        height: 65px;
+        background: url(images/arrows.png); }
+        .colophon .footer-nav-container .flex-direction-nav a:hover {
+          opacity: 1; }
+      .colophon .footer-nav-container .flex-direction-nav .flex-next {
+        right: 0;
+        background-position: 50px top; }
+      .colophon .footer-nav-container .flex-direction-nav .flex-prev {
+        left: 0; }
+
+.social {
+  display: inline-block; }
+  .social li {
+    display: inline-block;
+    vertical-align: top;
+    width: 2.5em; }
+    .social li img {
+      width: 100%;
+      height: auto; }
+
+.credits {
+  text-align: right;
+  margin: 60px 0 -20px; }
+
+.scroll {
+  -webkit-marquee: auto medium infinite scroll normal;
+  marquee: auto medium infinite scroll normal;
+  overflow-x: -webkit-marquee;
+  overflow-x: marquee; }
+
+@media screen and (min-width: 960px) and (max-width: 1219px) {
+  .wrapper {
+    width: 58.75em; }
+
+  .masthead .branding .logo {
+    width: 13.75em; }
+  .masthead .menu a {
+    font-size: 16px; }
+
+  .featured-content {
+    position: relative; }
+    .featured-content .flexslider .caption {
+      width: 18.75em; }
+      .featured-content .flexslider .caption h3 {
+        font-size: 42px; }
+      .featured-content .flexslider .caption .big-button {
+        padding: 10px;
+        font-size: 18px; }
+        .featured-content .flexslider .caption .big-button:after {
+          border-width: 42px;
+          right: -84px; }
+        .featured-content .flexslider .caption .big-button span {
+          font-size: 28px; }
+    .featured-content .flexslider .left {
+      left: 3.75em; }
+    .featured-content .flexslider .right {
+      right: 3.75em; }
+    .featured-content .flexslider .bottom {
+      bottom: 3.75em; }
+    .featured-content .flexslider .top {
+      top: 3.75em; }
+    .featured-content .flexslider .blktnt {
+      padding: 10px; }
+
+  .content h1, .content h3, .content h5 {
+    font-size: 38px; }
+
+  .page-content .primary {
+    width: 43.75em;
+    min-height: 33.75em; }
+  .page-content .secondary {
+    width: 13.75em; }
+
+  .colophon .flexslider {
+    width: 23.75em; }
+    .colophon .flexslider .slides li h4 {
+      width: 8.75em; } }
+@media screen and (min-width: 540px) and (max-width: 959px) {
+  .wrapper {
+    width: 38.75em; }
+
+  .masthead .branding .logo {
+    width: 11.75em;
+    position: relative;
+    margin-bottom: -4em; }
+  .masthead .menu ul {
+    display: none; }
+  .masthead #access {
+    text-align: right; }
+    .masthead #access select {
+      display: block;
+      right: 0;
+      top: 30px;
+      width: 25em;
+      position: absolute; }
+
+  .featured-content {
+    position: relative; }
+    .featured-content .flexslider .caption {
+      width: 18.75em; }
+      .featured-content .flexslider .caption h3 {
+        font-size: 42px; }
+      .featured-content .flexslider .caption .big-button {
+        padding: 10px;
+        font-size: 18px; }
+        .featured-content .flexslider .caption .big-button:after {
+          border-width: 42px;
+          right: -84px; }
+        .featured-content .flexslider .caption .big-button span {
+          font-size: 28px; }
+    .featured-content .flexslider .left {
+      left: 5%; }
+    .featured-content .flexslider .right {
+      right: 5%; }
+    .featured-content .flexslider .bottom {
+      bottom: 15%; }
+    .featured-content .flexslider .top {
+      top: 14%; }
+    .featured-content .flexslider .blktnt {
+      padding: 10px; }
+    .featured-content .flex-direction-nav {
+      display: none; }
+
+  .content h1, .content h3, .content h5 {
+    font-size: 38px; }
+
+  .page-content .primary {
+    width: 100%;
+    min-height: 33.75em; }
+  .page-content .secondary {
+    display: none; }
+
+  .gallery-item {
+    width: 45%; }
+
+  .colophon .flexslider {
+    width: 23.75em; }
+    .colophon .flexslider .slides li h4 {
+      width: 8.75em; } }
+@media screen and (min-width: 0px) and (max-width: 539px) {
+  .wrapper {
+    width: 18.75em; }
+
+  .masthead .branding .logo {
+    width: 13.75em;
+    position: relative;
+    margin: 0 auto; }
+  .masthead .menu ul {
+    display: none; }
+  .masthead .menu a {
+    font-size: 16px; }
+  .masthead .menu select {
+    display: block;
+    margin: 20px auto; }
+
+  .featured-content {
+    position: relative; }
+    .featured-content .flexslider .flex-direction-nav {
+      display: none; }
+    .featured-content .flexslider .caption {
+      display: none !important; }
+
+  .content h1, .content h3, .content h5 {
+    font-size: 38px; }
+
+  .page-content .primary {
+    width: 100%;
+    min-height: 100%; }
+  .page-content .secondary {
+    width: 100%;
+    display: none; }
+
+  .cat-thumbs {
+    border-width: 5px; }
+    .cat-thumbs h3 {
+      font-size: 25px; }
+
+  .gallery-item {
+    width: 95%; }
+
+  .colophon .flexslider {
+    width: 100%; }
+    .colophon .flexslider .slides li h4 {
+      width: 13.75em; }
+    .colophon .flexslider .slides li span {
+      display: none; }
+
+  .colophon .wrapper .footer-nav-container {
+    margin: 20px auto;
+    display: block; }
+  .colophon .wrapper .social {
+    text-align: center;
+    margin: 20px auto;
+    display: block; }
+  .colophon .wrapper h3 {
+    display: block;
+    text-align: center; } }
