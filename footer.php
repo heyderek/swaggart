@@ -9,7 +9,7 @@
               );
               $news_query = new WP_Query($args);
               while($news_query->have_posts()) : $news_query->the_post();
-                echo '<li><div class="ns-border-wrap"><h4><a href="' . get_permalink($news_query->ID) . '">' . get_the_title() . '</a></h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></div></li>';
+                echo '<li><div class="ns-border-wrap"><h4><a href="' . get_permalink($news_query->ID) . '">' . get_the_title() . '</a></h4><span><a class="button" href="'. get_permalink($news_query->ID) .'">Read More &raquo;</a></span></div></li>';
               endwhile; 
               wp_reset_postdata();
             ?>
