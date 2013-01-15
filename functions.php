@@ -32,11 +32,13 @@ function create_secondary() {
 }
 add_action('init', 'create_secondary');
 
+/*
 //Flush and rewrite the permalinks on theme activation and deactivation.
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
 add_action( 'after_switch_theme', 'my_rewrite_flush' );
+*/
 
 //Call in the navigation
 require_once('admin/nav.php');
