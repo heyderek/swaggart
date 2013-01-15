@@ -17,10 +17,11 @@
           </div><!-- /.flexslider -->
           <div class="footer-nav-container"></div><!-- /.footer-nav-container -->
           <ul class="social">
-            <li><a href="http://www.linkedin.com/company/2683901?trk=tyah" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/linked_in.png" alt="Swaggart on LinkedIn icon" /></a></li>
-            <li><a href="https://twitter.com/SwaggartBros" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png" alt="Swaggart on Twitter icon" /></a></li>
-            <li><a href="http://www.facebook.com/pages/Swaggart-Brothers-Inc/445260195519020" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png" alt="Swaggart on Facebook icon" /></a></li>
-            <li><a href="<? echo home_url('/'); ?>contact-us/"><img src="<?php bloginfo('template_url'); ?>/images/email.png" alt="Contact Swaggart icon" /></a></li>
+            <li><a href="http://www.linkedin.com/company/2683901?trk=tyah" target="_blank" title="Swaggart Brothers on Linked In."><img src="<?php bloginfo('template_url'); ?>/images/linked_in.png" alt="Swaggart on LinkedIn icon" /></a></li>
+            <li><a href="https://twitter.com/SwaggartBros" target="_blank" title="Swaggart Brothers on Twitter"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png" alt="Swaggart on Twitter icon" /></a></li>
+            <li><a href="http://www.facebook.com/pages/Swaggart-Brothers-Inc/445260195519020" target="_blank" title="Swaggart Brothers on Facebook"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png" alt="Swaggart on Facebook icon" /></a></li>
+            <li><a href="<? echo home_url('/'); ?>contact-us/" title="Contact Us"><img src="<?php bloginfo('template_url'); ?>/images/email.png" alt="Contact Swaggart icon" /></a></li>
+            <li><a href="https://sp.swaggartbrothers.com:4443" target="_blank" title="Swaggart Brothers' Sharepoint"><img src="<?php bloginfo('template_url'); ?>/images/sharepoint.png" alt="Swaggart Sharepoint" /></a></li>
           </ul><!-- /.social -->
           <section class="credits">
             <p>&copy; 2012 Swaggart Brothers. Inc.</p>
@@ -37,7 +38,6 @@
               ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
-          
           </script>
         </footer><!-- /.wrapper -->
       </section><!-- /.colophon -->
